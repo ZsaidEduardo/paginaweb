@@ -1,0 +1,41 @@
+<header class="header " *ngIf="isVisible">
+    <div class="header__contenedor">
+        <div class="header__contenedor_logo">
+            <img class="header__logo" src="assets/img/header__logo.png" alt="">
+        </div>
+
+        <nav class="header__menu">
+            <ul class="menu__ul">
+                <hr class="menu__base__ul">
+                
+                <li class="menu__item"><a [routerLink]="['inicio']"  class="menu__link menu__link--active">INICIO</a></li>
+                <li class="menu__item"><a [routerLink]="['booking']"   class="menu__link">BOOKING</a></li>
+                <li class="menu__item"><a [routerLink]="['joinup']" class="menu__link">UNETE</a></li>
+
+                <li class="menu__item"><a [routerLink]="['about']" class="menu__link">SOBRENOSOTROS</a></li>
+
+                <li class="menu__item">
+                    <a (click)="loguearse()" class="menu__link menu__link--login">Iniciar Sesión</a>
+                    <a (click)="registrer()" class="menu__link menu__link--login">Registrarse</a>
+                </li>
+
+                <li class="menu__item menu__item--banderas">
+                    <img class="bandera_ingles" src="assets/img/bandera_ingles.png" alt="">
+                    <img class="bandera_espanol" src="assets/img/bandera_español.png" alt="">
+                    <img id="bandera_ingles--segunda" src="assets/img/bandera_ingles.png" alt="">
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__contenedor_icono">
+            <a href="https://www.instagram.com/reel/C1CdWMuOeND/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                target="_blank" class="header__icono"><img src="assets/img/footer__icono_instagram.png" alt=""></a>
+            <a href="https://www.facebook.com/SpraYLs/" target="_blank" class="header__icono"><img
+                    src="assets/img/footer__icono_facebook.png" alt=""></a>
+        </div>
+    </div>
+
+   <img class="menu__responsive__button" src="assets/img/menu__responsive__img.png" alt="">
+</header> 
+
+

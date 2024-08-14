@@ -1,0 +1,312 @@
+.login__contenedor{
+    width: 100%;
+    height: 120vh;
+    max-height: 100vh;
+    overflow: hidden;
+    background: rgb(0,66,35);
+    background: linear-gradient(56deg, rgba(0,66,35,1) 33%, rgba(0,168,89,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.login__section{
+    width: 50%;
+}
+
+/* .volver_inicio_contenedor{
+    position: fixed;
+    top: 10px;
+    z-index: 1000000000;
+} */
+.volver_inicio_contenedor {
+    position: fixed;
+    top: 10px;
+    left: 10px; /* Alinea el botón a la izquierda */
+    z-index: 1000000000;
+
+    width: 50px; /* Ajusta el tamaño del contenedor según el tamaño de la imagen */
+    height: 50px; /* Asegúrate de que sea igual al ancho para mantener la forma circular */
+    border-radius: 50%; /* Hace que el contenedor sea circular */
+    background-color: #fff; /* Fondo blanco */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.volver_inicio_contenedor img {
+    width: 30px; /* Ajusta el tamaño de la imagen para que se ajuste bien dentro del círculo */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+/*-----------------------*/
+
+.login__section--leftSide{
+    padding: 100px;
+}
+
+.login__section--leftSide img{
+    display: block;
+    width: 65%;
+    margin: auto;
+}
+
+.login__section--leftSide h3{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 50px;
+    margin: 30px 0;
+    margin-top: 60px;
+}
+
+.login__section--leftSide h3 span{
+    color: #00a859;
+}
+
+.login__leftSide__subtitulo{
+    display: block;
+    font-size: 0.95rem;
+    color: #fff;
+    text-align: center;
+    padding: 0 50px;
+    line-height: 1.9;
+    letter-spacing: .5px;
+}
+
+/*------------------------------------------------*/
+
+.login__form{
+    background-image: url("./../../../assets/img/login__fondo__img.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    margin: auto;
+    padding: 65px 37px;
+    color: #fff;
+}
+
+.login__titulo{
+    text-align: center;
+    font-size: 1.1rem;
+    color: #00a859;
+    margin-bottom: 7px;
+}
+
+.login__fieldset{
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login__fieldset legend{
+    margin-left: 20px;
+    padding: 0 10px;
+    font-size: 0.6rem;
+    color: #fff;
+}
+
+.login__input{
+    width: 100%;
+    padding: 4px 10px;
+    padding-bottom: 6px;
+    font-size: 0.77rem;
+    color: #666;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.login__input--signup{
+    font-size: 0.75rem;
+}
+
+.login__input::placeholder{
+    color: #444;
+    font-size: 0.7rem;
+}
+
+.login__input[type="submit"]{
+    background-color: #00a859;
+    font-size: 0.75rem;
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px 6px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/*---------*/
+
+.login__separador{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.login__linea__separador{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+}
+
+.login__separador span{
+    display: block;
+    position: relative;
+    font-size: 0.70rem;
+    color: #fff;
+    background-color: #000;
+    padding: 0 10px;
+    z-index: 10;
+}
+
+/*-----*/
+
+.login__alternativo{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    padding: 10px 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.login__alternativo img{
+    width: 16px;
+    position: absolute;  
+}
+
+.login__alternativo span{
+    display: block;
+    font-size: 0.67rem;
+    text-align: center;
+    width: 100%; 
+}
+
+/*------*/
+
+.login__redireccionar{
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #fff;
+}
+
+.login__redireccionar a{
+    color: #00a859;
+    text-transform: uppercase;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////// RESPONSIVE DESIGN SMARTPHONE //////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+@media (max-width: 700px) {
+
+    .login__contenedor{
+        width: 100%;
+        height: auto;
+        max-height: none;
+        overflow-y: visible;
+        padding: 30px 0;
+    }
+    
+    .login__section{
+        width: 100%;
+    }
+    
+    /*-----------------------*/
+    
+    .login__section--leftSide{
+        padding: 25px;
+    }
+    
+    .login__section--leftSide img{
+        width: 60%;
+    }
+    
+    .login__section--leftSide h3{
+        font-size: 1.3rem;
+        padding: 0 20px;
+        margin: 15px 0;
+        margin-top: 30px;
+    }
+        
+    .login__leftSide__subtitulo{
+        font-size: 0.77rem;
+        padding: 0 20px;
+        line-height: 1.8;
+    }
+
+
+    /*-----------------------------------------*/
+
+    .login__form{
+        width: 95%;
+        padding: 65px 45px;
+        padding-top: 80px;
+    }
+    
+    .login__titulo{
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    
+    .login__fieldset legend{
+        padding: 0 8px;
+    }
+    
+    .login__input{
+        font-size: 0.65rem;
+    }
+    
+    .login__input--signup{
+        font-size: 0.65rem;
+    }
+    
+    .login__input::placeholder{
+        font-size: 0.65rem;
+    }
+    
+    .login__input[type="submit"]{
+        font-size: 0.7rem;
+    }
+    
+    /*---------*/
+    
+    .login__separador span{
+        font-size: 0.65rem;
+    }
+    
+    /*-----*/
+
+    .login__alternativo span{
+        font-size: 0.65rem;
+
+    }
+    
+    /*------*/
+    
+    .login__redireccionar{
+        font-size: 0.65rem;
+    }
+    
+    
+    
+}
+
+
+

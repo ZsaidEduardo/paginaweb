@@ -1,0 +1,238 @@
+
+
+
+.footer{
+    width: 100vw;
+    padding: 10px 50px;
+    background-color: #000;
+    color: #fff;
+
+}
+
+.footer__section{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+/*------------------------*/
+
+.footer__section_header__titulo{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.footer__section_header__titulo span{
+    color: #00A859;
+}
+
+/*------------------------*/
+
+.footer__section--main{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.footer_section_main__item{
+    width: 23%;
+}
+
+.footer_section_main__item_titulo img{
+    display: inline-block;
+    width: 15px;
+    margin-right: 5px;
+}
+
+.footer_section_main__item_titulo span{
+    display: inline-block;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.footer__main_lista{
+    padding-left: 40px;
+}
+
+.footer__lista__item{
+    margin: 8px 0;
+}
+
+.footer__section_main_dato{
+    display: block;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    font-weight: 700;
+    padding-left: 15px;
+}
+
+/*------------------------*/
+
+.footer__section--bottom{
+    position: relative;
+    height: 70px;
+}
+
+.footer__section_bottom_book{
+    background-color: #00A859;
+    border-radius: 20px;
+    border-bottom-right-radius: 0px;
+    padding: 15px;
+    color: #fff;
+    position: fixed;
+    bottom: 5px;
+    display: block;
+    right: 0;
+    left: 0;
+    margin: auto;
+    max-width: 160px;
+    text-decoration: none;
+    transition: all .25s;
+}
+
+.footer__section_bottom_book:hover{
+    background-color: #fff;
+    color: #00A859;
+}
+
+
+.contenedor__bottom_book{
+    position: relative;
+}
+
+.footer__section_bottom_book img{
+    width: 10px;
+    position: absolute;
+    left: 0px;
+    top: 4px;
+}
+
+.footer__section_bottom_book span{
+    display: block;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+/*---*/
+
+.footer__section_bottom_contenedor{
+    display: flex;
+    justify-content: center;
+    width: 9%;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    z-index: 1000;
+}
+
+.footer__section_bottom_contenedor a{
+    display: block;
+    width: 45%;
+    margin: 0 10px;
+}
+
+.footer__section_bottom_contenedor a img{
+    width: 100%;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////// RESPONSIVE DESIGN SMARTPHONE //////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (max-width: 700px) {
+
+    .footer{
+        padding: 30px;
+        padding-bottom: 70px;
+    }
+
+    .footer::before{
+        content: "";
+        display: block;
+        width: 80%;
+        margin: auto;
+        height: 1px;
+        background-color: #999;
+        margin-bottom: 50px;
+
+    }
+    
+    .footer__section{
+        margin-bottom: 50px;
+    }
+    
+    /*------------------------*/
+    
+    .footer__section_header__titulo{
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+        
+    /*------------------------*/
+    
+    .footer__section--main{
+        display: block;
+    }
+    
+    .footer_section_main__item{
+        width: 90%;
+        margin-bottom: 50px;
+    }
+
+    .footer_section_main__item_titulo  img{
+        width: 12px;
+    }
+    
+    .footer_section_main__item_titulo span{
+        font-size:0.92rem;
+    }
+    
+    .footer__main_lista{
+        padding-left: 45px;
+    }
+
+    .footer__lista__item{
+        font-size: 0.8rem;
+    }
+
+    .footer__section_main_dato{
+        font-size: 0.8rem;
+        padding-left: 30px;
+    }
+    
+    /*------------------------*/
+    
+    .footer__section--bottom{
+        position: relative;
+        height: auto;
+        margin-bottom: 0;
+    }
+    
+    .footer__section_bottom_book{
+        bottom: 5px;
+        max-width: 170px;
+    }
+       
+    .footer__section_bottom_book span{
+        font-size: 0.8rem;
+    }
+
+    .footer__section_bottom_book img{
+        top: 2px;
+    }
+    
+    /*---*/
+    
+    .footer__section_bottom_contenedor{
+        width: 25%;
+        margin: auto;
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        margin-bottom: 30px;
+    }
+    
+}

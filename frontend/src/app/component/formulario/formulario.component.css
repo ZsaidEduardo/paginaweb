@@ -1,0 +1,335 @@
+.header__unete{
+    width: 100%;
+    padding: 20px 0;
+    background-color: #00a859;
+    position: relative;
+}
+
+.header__unete__titulo{
+    width: 12%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #fff;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.volver_inicio_contenedor{
+    top: 10px;
+}
+
+/*--//////////////////////////////////////////-----*/
+
+.main__formulario{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000;
+    padding: 75px 0;
+}
+
+.contenedor__formulario__unete{
+    width: 75%;
+    margin: auto;
+    padding: 80px 120px;
+    background-color: #00a859;
+    color: #fff;
+    font-weight: 700;
+}
+
+.formulario__titulo{
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 1.5rem;
+}
+
+.formulario__label{
+    display: block;
+    text-align: center;
+    font-size: 0.97rem;
+}
+
+.formulario__input, .formulario__textarea{
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #000;
+    border: 2px solid transparent;
+    outline: none;
+    border-radius: 20px;
+    margin-bottom: 60px;
+    margin-top: 15px;
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+.formulario__textarea{
+    height: 150px;
+    padding: 15px 20px;
+    resize: none;
+}
+
+.formulario__textarea:focus{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.formulario__input:focus{
+    outline: 2px solid #fff;
+}
+
+/*--------------------------------------*/
+
+
+.formulario__select{
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    margin-top: 15px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.cabecera_select{
+    width: 100%;
+    display: block;
+    height: 50px;
+    max-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select_img{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.select_img img{
+    width: 30px;
+}
+
+.formulario__select input[type="checkbox"], .input_diasDisponibilidad{
+    display: none;
+}
+
+.contenedor_opciones{
+    position: absolute;
+    width: 100%;
+}
+
+.formulario__select label{
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    text-decoration: center;
+    background-color: #000;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+/*--------------------------------------*/
+
+
+input[type="date"]::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 16px;
+    filter: invert(0.9);
+}
+
+/*-----------*/
+
+.formulario__contenedor__inputsRadio{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.formulario__input--radio{
+    padding: 15px 20px;
+    background-color: #000;
+    border-radius: 30px;
+    padding-left: 50px;
+    cursor: pointer;
+}
+
+.formulario__input--radio input[type="radio"]{
+    display: inline-block;
+    margin-left: 70px;
+    min-width: 15px;
+    width: 15px;
+    accent-color: #008547;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/*-----------*/
+
+.formulario__contenedor__terminos{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario__contenedor__terminos input{
+    display: inline-block;
+    accent-color: #000;
+}
+
+.formulario__terminos{
+    display: inline-block;
+    line-height: 1.6;
+    font-size: 0.87;
+    text-align: justify;
+    padding-right: 20px;
+}
+
+
+.formulario__unete input[type="submit"]{
+    display: block;
+    width: 250px;
+    margin: 70px auto;
+    padding: 25px 20px;
+    text-align: center;
+    font-size: 0.92rem;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////// RESPONSIVE DESIGN SMARTPHONE //////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+@media (max-width: 700px) {
+
+
+    .header__unete{
+        padding: 15px 0;
+    }
+    
+    .header__unete__titulo{
+        width:24%;
+        font-size: 1.3rem;
+    }
+    
+    .volver_inicio_contenedor{
+        top: 16px;
+    }
+    
+    /*--//////////////////////////////////////////-----*/
+    
+    .main__formulario{
+        padding: 40px 0;
+    }
+    
+    .contenedor__formulario__unete{
+        width: 95%;
+        padding: 40px 30px;
+    }
+    
+    .formulario__titulo{
+        margin-bottom: 35px;
+        font-size: 1.2rem;
+    }
+    
+    .formulario__label{
+        font-size: 0.75rem;
+    }
+    
+    .formulario__input, .formulario__textarea{
+        padding: 8px 12px;
+        margin-bottom: 40px;
+        margin-top: 10px;
+        font-size: 0.7rem;
+    }
+
+    .formulario__textarea{
+        height: 100px;
+    }
+
+    /*----------------------------------*/
+
+    .formulario__select{
+        width: 100%;
+        margin-bottom: 40px;
+        margin-top: 10px;
+        font-size: 0.8rem;
+    }
+    
+    .select_img{
+        top: 15px;
+    }
+    
+    .select_img img{
+        width: 20px;
+    }
+    
+    
+    .formulario__select label{
+        padding: 11px 15px;
+        font-size: 0.7rem;
+    }
+    
+    
+    /*-----------*/
+    
+    .formulario__contenedor__inputsRadio{
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+    
+    .formulario__input--radio{
+        padding: 8px 12px;
+        padding-left: 30px;
+    }
+
+    .formulario__input--radio span{
+        font-size: 0.77rem;
+    }
+    
+    .formulario__input--radio input[type="radio"]{
+        display: inline-block;
+        margin-left: 50px;
+    }
+    
+    /*-----------*/
+    
+    .formulario__contenedor__terminos{
+        width: 100%;
+    }
+
+    
+    .formulario__terminos{
+        max-width: 90%;
+        font-size: 0.67rem;
+        padding-right: 10px;
+    }
+
+    /*--------------------------*/
+    
+    .formulario__unete input[type="submit"]{
+        width: 200px;
+        margin: 50px auto;
+        padding: 15px 15px;
+        font-size: 0.77rem;
+    }
+        
+
+}

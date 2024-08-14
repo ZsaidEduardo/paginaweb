@@ -1,0 +1,866 @@
+/*---------------- PANTALLA CARGAA --------------------*/
+
+.pantallaDeCarga{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10000000000000000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+}
+
+.pantalladeCarga__item{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+   to{
+    transform: rotate(360deg);
+   } 
+}
+
+.pantalladeCarga__item::before{
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0,168,89,1) 0%, rgba(0,66,35,1) 100%);
+
+
+}
+
+.pantalladeCarga__item::after{
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    width: 85%;
+    height: 85%;
+    background-color: #111;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*-------------------------------------*/
+
+/* PORTADA */
+/*------------ MAIN ------------*/
+
+.main{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.main__section{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items:center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.main__section--portada{
+    background-color: #00A859;
+    justify-content: space-between;
+    padding: 50px 25px;
+    padding-top: 100px;
+}
+
+.main__section--getready{
+    min-height: 100vh;
+    padding-bottom: 50px;
+    align-items: center;
+    background-color: #000;
+}
+
+/*----*/
+.portada__section{
+    width: 50%;
+}
+
+.portada__section--text{
+    padding: 0px 100px;
+}
+
+.portada__titulo{
+    font-size: 3rem;
+    text-wrap: balance;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 50px;
+    margin-left: 60px;
+}
+
+.portada__subtitulo{
+    font-size: 0.95rem;
+    color: #fff;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 35px;
+    padding-left: 60px;
+}
+
+.portada__button{
+    display: block;
+    background-color: #000;
+    color: #fff;
+    font-size: 0.85rem;
+    outline: none;
+    border: none;
+    font-family: "quick";
+    font-weight: 700;
+    padding: 15px 20px;
+    margin: auto;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    width: 120px;
+
+}
+
+/*--------------*/
+
+.portada__section--img{
+    position: relative;
+    overflow: hidden;
+}
+
+.portada__section--img img{
+    width: 85%;
+    display: block;
+    margin: auto;
+    border-radius: 30px;
+}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////// RESPONSIVE DESIGN SMARTPHONE //////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (max-width: 700px) {
+
+    .portada__section{
+        width: 100%;
+    }
+    
+    .portada__section--text{
+        padding: 30px;
+    }
+    
+    .portada__titulo{
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-left: 00px;
+        text-wrap: initial;
+        margin-top: 40px;
+    }
+        
+    .portada__subtitulo{
+        width: 80%;
+        margin: auto;
+        font-size: 0.9rem;
+        margin-bottom: 40px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+
+    .portada__button{
+        padding: 15px 30px;
+    
+    }
+    
+    /*--------------*/
+
+    .portada__section--img img{
+        width: 85%;
+    }
+
+}
+
+
+/*-----------------------------*/
+
+/*--------------GANANCIA--------------*/
+.main__section--ganancia{
+    background-color: #000;
+    color: #fff;
+    min-height: 80vh;
+}
+
+.ganancia__section--text{
+    width: 55%;
+}
+
+.ganancia__titulo{
+    font-size: 3.3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 35px;
+    text-wrap: balance;
+    padding: 0 150px;
+    letter-spacing: 2px;
+}
+
+.ganancia__titulo span{
+    color: #00A859;
+}
+
+.ganancia__subtitulo{
+    font-size: 0.9rem;
+    color: #fff;
+    font-weight: 700;
+    display: block;
+    text-align: left;
+    padding-left: 150px;
+    padding-right: 50px;
+}
+
+
+/*---------------*/
+
+.ganancia__section--img{
+    width: 40%;
+    margin-left: 5%;
+}
+
+.ganancia__section--img img{
+    width: 90%;
+    margin: auto;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////// RESPONSIVE DESIGN SMARTPHONE //////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+@media (max-width: 700px) {
+
+    .main__section--ganancia{
+        min-height: auto;
+    }
+
+    .ganancia__section--text{
+        width: 100%;
+        padding: 50px 0;
+        padding-bottom: 0;
+    }
+    
+    .ganancia__titulo{
+        font-size: 1.8rem;
+        line-height: 1.5;
+        margin-bottom: 35px;
+        text-wrap: initial;
+        text-align: center;
+        padding: 0 30px;
+    }
+    
+    .ganancia__subtitulo{
+        font-size: 0.8rem;
+        line-height: 1.6;
+        padding: 0 15px;
+        text-align: center;
+        width: 85%;
+        margin: auto;
+    }
+    
+    
+    /*---------------*/
+    
+    .ganancia__section--img{
+        width: 95%;
+        margin: 50px auto;
+    }
+    
+    .ganancia__section--img img{
+        display: block;
+    }
+
+}
+
+/*----------DESCRIPCION----------------*/
+.main__section--descripcion{
+    background-color: #000;
+    color: #fff;  
+    padding: 50px;
+    align-items: start;
+}
+
+.descripcion__section--text{
+    width: 55%;
+    padding: 0 120px;
+}
+
+.descripcion__titulo{
+    font-size: 2rem;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+
+.descripcion__parrafo{
+    font-size: 0.90rem;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.descripcion__parrafo--conEspaciado{
+    margin-bottom: 25px;
+}
+
+
+/*---------------------*/
+
+.descripcion__section--img{
+    width: 45%;
+}
+
+.descripcion__section--img img{
+    width: 100%;
+}
+
+
+/*-------------------------------------*/
+
+.descripcion__section--text--SecondSection{
+    padding: 0;
+    padding-right: 150px;
+}
+
+
+.descripcion__titulo--SecondSection{
+    margin-left: 70px;
+}
+
+.descripcion__titulo--SecondSection span{
+    color: #00A859;
+}
+
+.descripcion__section--img--SecondSection{
+    padding-top: 100px;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////// RESPONSIVE DESIGN SMARTPHONE //////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+@media (max-width: 700px) {
+
+    .main__section--descripcion{
+        padding: 20px 25px;
+    }
+    
+    .descripcion__section--text{
+        width: 100%;
+        padding: 0;
+    }
+    
+    .descripcion__titulo{
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+    
+    
+    .descripcion__parrafo{
+        font-size: 0.72rem;
+        line-height: 2;
+        text-align: left;
+    }
+    
+    /*---------------------*/
+    
+    .descripcion__section--img:first-child{
+        display: none;
+    }
+
+    .descripcion__section--img{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+        
+    /*-------------------------------------*/
+    
+    .descripcion__section--text--SecondSection{
+        padding: 0;
+    }
+    
+    .descripcion__titulo--SecondSection{
+        margin-left: 00px;
+    }
+        
+    .descripcion__section--img--SecondSection{
+        padding-top: 0px;
+    }
+
+    .descripcion__section--img--SecondSection img{
+        margin-top: 45px;
+    }
+    
+    
+}
+
+
+/*-------------BENEFICIO--------------------*/
+.main__section--beneficios{
+    min-height: 80vh;
+    background-color: #000;
+    padding: 50px;
+    display: block;
+    overflow: visible;
+}
+
+.beneficios__section_titulo{
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 100px
+}
+
+.beneficios__section_titulo span{
+    color: #00A859;
+}
+
+.beneficios__section_contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.beneficio__item{
+    width: 30%;
+}
+
+.beneficio__item__img{
+    display: block;
+    width: 14%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.beneficio__item__titulo{
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.beneficio__item__descripcion{
+    font-size: 0.85rem;
+    color: #fff;
+    font-weight: 700;
+    width: 80%;
+    margin: auto;
+    line-height: 1.4;
+    text-align: justify;
+
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////// RESPONSIVE DESIGN SMARTPHONE //////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+@media (max-width: 700px) {
+
+    .main__section--beneficios{
+        min-height: auto;
+        padding: 25px;
+    }
+    
+    .beneficios__section_titulo{
+        font-size: 1.5rem;
+        margin-bottom: 60px
+    }
+        
+    .beneficios__section_contenedor{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .beneficio__item{
+        width: 90%;
+        margin-bottom: 50px;
+    }
+    
+    .beneficio__item__img{
+        width: 10%;
+        margin-bottom: 30px;
+    }
+    
+    .beneficio__item__titulo{
+        color: #00A859;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .beneficio__item__descripcion{
+        font-size: 0.72rem;
+        width: 100%;
+        text-align: center;
+        line-height: 2;
+    }
+    
+    
+    
+}
+
+
+/*------------GENERA--------------*/
+
+.main__section--genera{
+    min-height: 80vh;
+    background-color: #000;
+    padding: 50px 110px;
+    justify-content: space-between;
+}
+
+.genera__section--img{
+    width: 50%;
+}
+
+.genera__section--img img{
+    width: 90%;
+    margin: auto;
+}
+
+
+/*-----------*/
+
+
+.genera__section--text{
+    width: 50%;
+    color: #fff;
+    padding: 0 30px;
+}
+
+.genera__titulo{
+    font-size: 1.9rem;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+
+.genera__subtitulo{
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.genera__parrafo{
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.genera__titulo span{
+    color: #00A859;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////// RESPONSIVE DESIGN SMARTPHONE //////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+@media (max-width: 700px) {
+
+    .main__section--genera{
+        min-height: auto;
+        padding: 25px;
+    }
+    
+    .genera__section--img{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    
+    .genera__section--img img{
+        width: 100%;
+        display: block;
+    }
+    
+    
+    /*-----------*/
+    
+    
+    .genera__section--text{
+        width: 100%;
+        padding: 0;
+    }
+    
+    .genera__titulo{
+        font-size: 1.3rem;
+    }
+    
+    .genera__subtitulo{
+        margin-bottom: 15px;
+        color: #00A859;
+        font-size: 0.9rem;
+    }
+    
+    .genera__parrafo{
+        margin-bottom: 45px;
+        font-size: 0.72rem;
+        text-align: left;
+    }
+       
+    
+}
+
+
+/*------------REQUISITOS-------------------*/
+.main__section--requisitos{
+    min-height: 80vh;
+    background-color: #000;
+    padding: 50px 100px;
+    display: block;
+}
+
+.requisitos__section_titulo{
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 100px
+}
+
+.requisitos__section_titulo span{
+    color: #00A859;
+}
+
+.requisitos__section_contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.requisito__item{
+    width: 26%;
+    color: #fff;
+}
+
+.requisito__item__img{
+    display: block;
+    height: 55px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.requisito__item__titulo{
+    display: block;
+    text-align: center;
+    font-size: 1.17rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.requisito__item__lista{
+    width: 100%;
+    margin-left: 25px;
+}
+
+.requisito__lista__item{
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 10px;
+}
+
+li::marker{
+    color: #00A859;
+    font-size: 22px;
+    
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////// RESPONSIVE DESIGN SMARTPHONE //////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+@media (max-width: 700px) {
+
+    .main__section--requisitos{
+        min-height: auto;
+        padding: 25px;
+    }
+    
+    .requisitos__section_titulo{
+        font-size: 1.4rem;
+        margin-bottom: 60px
+    }
+    
+    .requisitos__section_contenedor{
+        flex-wrap: wrap;
+    }
+    
+    .requisito__item{
+        width: 85%;
+        margin-bottom: 50px;
+    }
+    
+    .requisito__item__img{
+        height: 35px;
+        margin-bottom: 20px;
+    }
+    
+    .requisito__item__titulo{
+        color: #00A859;
+        font-size: 0.9rem;
+    }
+    
+    .requisito__item__lista{
+        width: 100%;
+        margin-left: 0px;
+    }
+    
+    .requisito__lista__item{
+        font-size: 0.75rem;
+        margin: 10px;
+    }   
+    
+}
+
+/*SEGURIDAD*/
+
+.main__section--seguridad{
+    min-height: 80vh;
+    background-color: #000;
+    padding: 50px;
+    display: block;
+}
+
+.seguridad__section_titulo{
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 25px
+}
+
+.seguridad__section_subtitulo{
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 80px
+}
+
+
+.seguridad__section_contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.seguridad__item{
+    width: 30%;
+    margin: 0 100px;
+}
+
+.seguridad__item__img{
+    display: block;
+    width: 14%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.seguridad__item__titulo{
+    display: block;
+    font-size: 1.05rem;
+    text-align: center;
+    color: #00A859;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.seguridad__item__descripcion{
+    font-size: 0.82rem;
+    color: #fff;
+    font-weight: 700;
+    width: 80%;
+    margin: auto;
+    line-height: 1.6;
+    text-align: justify;
+
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////// RESPONSIVE DESIGN SMARTPHONE //////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+@media (max-width: 700px) {
+
+    .main__section--seguridad{
+        min-height: auto;
+        padding: 25px;
+    }
+    
+    .seguridad__section_titulo{
+        font-size: 1.4rem;
+        margin-bottom: 15px
+    }
+    
+    .seguridad__section_subtitulo{
+        font-size: 0.75rem;
+        margin-bottom: 50px
+    }
+    
+    
+    .seguridad__section_contenedor{
+        flex-wrap: wrap;
+    }
+    
+    .seguridad__item{
+        width: 85%;
+        margin: 0px;
+        margin-bottom: 50px;
+    }
+    
+    .seguridad__item__img{
+        width: 10%;
+    }
+    
+    .seguridad__item__descripcion{
+        font-size: 0.72rem;
+        line-height: 2;
+        width: 100%;
+        text-align: center;
+    }
+    
+}
+
+/*------------ MAIN ------------*/
+
+.main__section--getready{
+    min-height: 100vh;
+    padding-bottom: 50px;
+    align-items: center;
+    background-color: #000;
+}
+
+.getready__video{
+    width: 30%;
+    margin: auto;
+}
+

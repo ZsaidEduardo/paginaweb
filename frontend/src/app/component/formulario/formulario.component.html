@@ -1,0 +1,113 @@
+
+
+
+<main class="main__formulario">
+
+    <form class="formulario__unete" action="" method="post">
+    
+    <div class="contenedor__formulario__unete">
+
+        <h3 class="formulario__titulo">Formulario</h3>
+
+
+        <label class="formulario__label" for="">Nombre Completo</label>
+        <input type="text" class="formulario__input" name="nombre_completo" id="nombre_completo">
+        
+
+        <label class="formulario__label" for="">Fecha de Nacimiento</label>
+        <input type="date" class="formulario__input" name="fecha_nacimiento" id="fecha_nacimiento">
+        
+
+        <label class="formulario__label" for="">Dirección</label>
+        <input type="text" class="formulario__input" name="direccion" id="direccion">
+
+
+        <label class="formulario__label" for="">Número de Teléfono</label>
+        <input type="text" class="formulario__input" name="numero_telefono" id="numero_telefono">
+        
+
+        <label class="formulario__label" for="">Correo Electrónico</label>
+        <input type="email" class="formulario__input" name="email" id="email">
+        
+
+        <label class="formulario__label" for="">Tienes experiencia previa en detallado de automoviles</label> 
+        <div class="formulario__contenedor__inputsRadio">
+            <label for="experiencia_previa_si" class="formulario__input--radio">
+                <span>Si</span>
+                <input type="radio" id="experiencia_previa_si" class="formulario__input--radio formulario__radiobutton" name="experiencia_previa" value="si">
+            </label>
+
+            <label for="experiencia_previa_no" class="formulario__input--radio">
+                <span>No</span>
+                <input type="radio" id="experiencia_previa_no" class="formulario__input--radio formulario__radiobutton" name="experiencia_previa" value="no">
+            </label>
+        </div>
+           
+        
+        <label class="formulario__label" for="">Si te respuesta fue si , describa su experiencia </label>
+        <textarea name="textarea_experiencia" id="" class="formulario__textarea"></textarea>
+
+
+        <label class="formulario__label" for="">Tiene transporte propio</label> 
+        <div class="formulario__contenedor__inputsRadio">
+            
+            <label for="transporte_propio_si" class="formulario__input--radio">
+                <span>Si</span>
+                <input type="radio" id="transporte_propio_si" class="formulario__input--radio formulario__radiobutton" name="transporte_propio" value="si">
+            </label>
+
+            <label for="transporte_propio_no" class="formulario__input--radio">
+                <span>No</span>
+                <input type="radio" id="transporte_propio_no" class="formulario__input--radio formulario__radiobutton" name="transporte_propio" value="no">
+            </label>
+        </div>
+
+        
+        <label class="formulario__label" or="">¿Está dispuesto a trabajar fines de semana y días festivos?</label> 
+        <div class="formulario__contenedor__inputsRadio">
+            <label for="disposicion_diaFestivo_si" class="formulario__input--radio">
+                <span>Si</span>
+                <input type="radio" id="disposicion_diaFestivo_si" class="formulario__input--radio formulario__radiobutton" name="disposicion_diaFestivo" value="si">
+            </label>
+
+            <label for="disposicion_diaFestivo_no" class="formulario__input--radio">
+                <span>No</span>
+                <input type="radio" id="disposicion_diaFestivo_no" class="formulario__input--radio formulario__radiobutton" name="disposicion_diaFestivo" value="no">
+            </label>
+        </div>
+
+        
+        <label class="formulario__label" for="">Disponibilidad</label>
+        <label class="formulario__label" for="">Dias de la semana disponibles para trabajar</label>
+        <div class="formulario__select">
+            <span class="cabecera_select">Días de la Semana</span>
+            <div class="contenedor_opciones">
+            <label class="opcion_dia" for="lunes" id="lunes" onclick="optionClick('lunes', 0)">Lunes</label><input type="checkbox" name="lunes" id="lunes">
+            <label class="opcion_dia" for="martes" id="martes" onclick="optionClick('martes', 1)">Martes</label><input type="checkbox" name="martes" id="martes">
+            <label class="opcion_dia" for="miercoles" id="miercoles" onclick="optionClick('miercoles', 2)">Miércoles</label><input type="checkbox" name="" id="miercoles">
+            <label class="opcion_dia" for="jueves" id="jueves" onclick="optionClick('jueves', 3)">Jueves</label><input type="checkbox" name="jueves" id="jueves">
+            <label class="opcion_dia" for="viernes" id="viernes" onclick="optionClick('viernes', 4)">Viernes</label><input type="checkbox" name="viernes" id="viernes">
+            <label class="opcion_dia" for="sabado" id="sabado" onclick="optionClick('sabado', 5)">Sábado</label><input type="checkbox" name="sabado" id="sabado">
+            <label class="opcion_dia" for="domingo" id="domingo" onclick="optionClick('domingo', 6)">Domingo</label><input type="checkbox" name="domingo" id="domingo">
+            </div>
+            <span class="select_img">
+                <img src="assets/img/row_select.png" alt="">
+            </span>
+        </div>
+
+        <input type="text" name="diasDisponibilidad" class="input_diasDisponibilidad">
+
+        <div class="formulario__contenedor__terminos">
+
+            <label for="" class="formulario__terminos">Conformidad y Aceptación<br>Certifico que la información proporcionada es veraz y completa. Entiendo que cualquier falsedad o omisión puede resultar en la descalificación de mi candidatura o, si soy contratado, en la terminación del empleo.</label>
+            <input type="checkbox" class="formulario__input--checkbox">
+                
+        </div>
+
+        </div>
+
+        <input type="submit" value="Confirmar" class="unete__submit">
+
+    </form>
+    
+</main>
