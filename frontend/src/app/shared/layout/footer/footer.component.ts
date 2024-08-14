@@ -12,7 +12,7 @@ import { NavigationEnd, Router } from '@angular/router';
 export class FooterComponent {
 
   isVisible: boolean = true;
-  private hiddenRoutes = ['/login', '/signup', '/profile'];
+  private hiddenRoutes = ['/login', '/signup', '/booking'];
 
   constructor(private router: Router) {}
 

@@ -13,7 +13,7 @@ export class HeadersComponent  {
 
   isVisible: boolean = true;
   
-  private hiddenRoutes = ['/login', '/signup'];
+  private hiddenRoutes = ['/login', '/signup' , '/booking'];
 
   constructor( private router: Router) {}
 
@@ -36,5 +36,10 @@ export class HeadersComponent  {
   registrer():void{
     this.router.navigate(['signup']);
   }
+
+  reserva():void{
+    this.router.navigate(['booking']);
+  }
+
 
 }
