@@ -110,24 +110,25 @@
     color: #fff;
 }
 
-.login__input{
+.login__input {
     width: 100%;
     padding: 4px 10px;
     padding-bottom: 6px;
-    font-size: 0.77rem;
+    font-size: 0.77rem; 
     color: #666;
     border: none;
     outline: none;
     background-color: transparent;
 }
 
+
 .login__input--signup{
     font-size: 0.75rem;
 }
 
-.login__input::placeholder{
+.login__input::placeholder {
     color: #444;
-    font-size: 0.7rem;
+    font-size: 0.7rem; /* Asegúrate de que este tamaño sea adecuado para el diseño */
 }
 
 .login__input[type="submit"]{
@@ -212,7 +213,12 @@
 /*///////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////// RESPONSIVE DESIGN SMARTPHONE //////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////*/
-
+@media (max-width: 700px) {
+    .login__fieldset legend {
+        padding: 0 8px;
+        font-size: 0.6rem; /* Ajusta el tamaño de la fuente si es necesario */
+    }
+}
 
 @media (max-width: 700px) {
 
@@ -305,7 +311,24 @@
     }
     
     
-    
 }
 
+
+/* animacion de entrada de la pagina */
+/* styles.css o tu archivo de estilos globales */
+.fade-in {
+    animation: fadeInAnimation 1s ease-in-out;
+  }
+  
+  @keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+/**/
 

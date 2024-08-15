@@ -1,4 +1,4 @@
-<main class="login__contenedor">
+<main class="login__contenedor" [ngClass]="{'fade-in': isVisible}">
 
     <a href="index.html" class="volver_inicio_contenedor">
         <img src="assets/img/volver.png" alt="">
@@ -13,27 +13,25 @@
             detail."</span>
     </section>
 
-    <section class="login__section login__section--rightSide" data-aos="fade-left" data-aos-duration="500"
-        data-aos-delay="1000">
+    <section class="login__section login__section--rightSide" >
 
         <form action="" class="login__form">
 
             <h3 class="login__titulo">Welcome Again</h3>
 
-           <!--  <fieldset class="login__fieldset">
+            <!-- <fieldset class="login__fieldset">
                 <legend>Your name</legend>
                 <input type="text" name="nombre" class="login__input" placeholder="George Washington" required>
             </fieldset> -->
 
             <fieldset class="login__fieldset">
-                <legend>Email</legend>
+                <h1>Email</h1>
                 <input type="email" name="email" class="login__input" placeholder="example@youremail.com" required>
             </fieldset>
-
+            
             <fieldset class="login__fieldset">
                 <legend>Password</legend>
                 <input type="password" name="contrasena" class="login__input" placeholder="Password" required>
-
             </fieldset>
 
             <input type="submit" name="" class="login__input login_submit" value="Get Started" required>
