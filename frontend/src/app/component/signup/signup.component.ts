@@ -19,7 +19,7 @@ export class SignupComponent implements  OnInit {
 
 
 
-      _cargarScript.carga(["configuraciones_idiomas/idioma_login"]);
+      _cargarScript.carga(["configuraciones_idiomas/idioma_signup"]);
       _cargarScript.carga(["altura_login"]);
     
 
