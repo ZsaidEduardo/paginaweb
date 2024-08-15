@@ -1,23 +1,34 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, OnInit } from '@angular/core';
 
-import { BookingComponent } from './booking.component';
+@Component({
+  selector: 'app-booking',
+  templateUrl: './booking.component.html',
+  styleUrls: ['./booking.component.css']
+})
+export class BookingComponent implements OnInit {
+  sections = ['carro', 'extras', 'fecha-hora', 'detalles', 'resumen'];
+  currentSection = 0;
 
-describe('BookingComponent', () => {
-  let component: BookingComponent;
-  let fixture: ComponentFixture<BookingComponent>;
+  constructor() { }
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [BookingComponent]
-    })
-    .compileComponents();
-    
-    fixture = TestBed.createComponent(BookingComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  ngOnInit(): void {
+    this.showSection(0);
+  }
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  showSection(index: number): void {
+    // Implementa la lógica para mostrar la sección
+    // Puedes usar ViewChild o manipular el DOM directamente si es necesario
+  }
+
+  validateCurrentSection(): boolean {
+    // Implementa la lógica de validación
+    return true; // Cambia esto según tu lógica de validación
+  }
+
+  nextSection(): void {
+    if (this.validateCurrentSection() && this.currentSection < this.sections.length - 1) {
+      this.currentSection++;
+      this.showSection(this.currentSection);
+    }
+  }
+}
