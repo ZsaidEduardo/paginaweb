@@ -308,3 +308,22 @@
     }
     
 }
+
+/*animacion*/
+/* animacion de entrada de la pagina */
+/* styles.css o tu archivo de estilos globales */
+.fade-in {
+    animation: fadeInAnimation 1s ease-in-out;
+  }
+  
+  @keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+/**/
