@@ -29,7 +29,7 @@ recorrerIdioma(idiomaEspanol_tituloForm, idiomaEIngles_tituloForm, titulo_form)
 
 /*------------------------------*/
 
-var input_tags = document.querySelectorAll(".login__fieldset legend")
+var input_tags = document.querySelectorAll(".login__fieldset h4")
 
 var idiomaEspanol_inputsTag = [
     "Tu Nombre", "Correo", "Contraseña" 
@@ -61,7 +61,7 @@ recorrerIdioma(idiomaEspanol_otroTag, idiomarIngles_otroTag, otra_opcion_tag)
 
 /*---------------------------------*/
 
-var otras_alternativas = document.querySelectorAll(".login__alternativo span")
+var otras_alternativas = document.querySelectorAll(".login__alternativo span ")
 var idiomaEspanol_loginALternativo = [
     "Iniciar Sesión con Google",
     "Iniciar Sesión con Facebook",
