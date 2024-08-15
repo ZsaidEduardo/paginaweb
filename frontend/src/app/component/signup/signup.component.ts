@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CargarScriptService } from '../../services/cargar-script.service';
 
@@ -10,16 +10,16 @@ import { CargarScriptService } from '../../services/cargar-script.service';
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css'
 })
-export class SignupComponent {
+export class SignupComponent implements  OnInit {
 
 
-  isVisible: boolean = true;
+  isVisible: boolean = false;
 
   constructor( private _cargarScript: CargarScriptService) {
 
 
 
-      _cargarScript.carga(["configuraciones_idiomas/idioma_login"]);
+      _cargarScript.carga(["configuraciones_idiomas/idioma_signup"]);
       _cargarScript.carga(["altura_login"]);
     
 
@@ -30,6 +30,11 @@ export class SignupComponent {
         this.isVisible = true;
       }
     }); */
+  }
+
+  ngOnInit() {
+    // La animación comienza cuando el componente se inicializa
+    this.isVisible = true;
   }
 
 }

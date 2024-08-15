@@ -45,9 +45,9 @@ recorrerIdioma(idiomaEspanol_inputsTag, idiomaIngles_inputsTag, input_tags)
 var button_form = document.querySelector(".login_submit")
 
 if(localStorage.getItem("idioma") == "espanol"){
-    button_form.value = "Empezar"
+    button_form.value = "Iniciar Sesión"
 }else{
-    button_form.value = "Get Started"
+    button_form.value = "Loguin"
 }
 
 /*--------------------------------*/
