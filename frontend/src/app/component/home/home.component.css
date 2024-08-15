@@ -23,12 +23,12 @@
     overflow-x: hidden;
 }
 
-.main__section--portada{
+/* .main__section--portada{
     background-color: #00A859;
     justify-content: space-between;
     padding: 50px 25px;
     padding-top: 100px;
-}
+} */
 
 .main__section--getready{
     min-height: 100vh;
@@ -528,6 +528,7 @@
 
 
 /*PORTADA*/
+
 .main__section--portada{
     padding: 0;
     position: relative;
@@ -540,6 +541,7 @@
 
 .video_portada{
     width: 100%;
+    
 }
 
 .mascara{
@@ -635,3 +637,31 @@
     }
     
 }
+
+
+
+
+/*define el fade*/
+/* Define la animación de fade-in con una duración más larga */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Aplica estilos básicos para las imágenes */
+  .galeria__img {
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 1.5s ease, transform 1.5s ease; /* Ajusta el tiempo de la transición */
+  }
+  
+  /* Clase que se añade cuando el elemento debe ser visible */
+  .visible {
+    opacity: 1;
+    animation: fadeIn 1.9s ease forwards; /* Aumenta la duración de la animación */
+  }

@@ -3,6 +3,7 @@
     padding: 20px 0;
     background-color: #00a859;
     position: relative;
+    height: 100px;
 }
 
 .header__unete__titulo{
@@ -11,13 +12,34 @@
     text-align: center;
     padding-bottom: 5px;
     border-bottom: 3px solid #fff;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #fff;
     font-weight: 700;
 }
 
 .volver_inicio_contenedor{
     top: 10px;
+}
+
+/*mouse*/
+.volver_inicio_contenedor {
+    position: fixed;
+    top: 10px;
+    left: 10px; /* Alinea el botón a la izquierda */
+    z-index: 1000000000;
+
+    width: 50px; /* Ajusta el tamaño del contenedor según el tamaño de la imagen */
+    height: 50px; /* Asegúrate de que sea igual al ancho para mantener la forma circular */
+    border-radius: 50%; /* Hace que el contenedor sea circular */
+    background-color: #fff; /* Fondo blanco */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.volver_inicio_contenedor img {
+    width: 30px; /* Ajusta el tamaño de la imagen para que se ajuste bien dentro del círculo */
+    height: auto; /* Mantiene la proporción de la imagen */
 }
 
 /*--//////////////////////////////////////////-----*/

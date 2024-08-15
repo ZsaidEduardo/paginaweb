@@ -8,15 +8,15 @@
             <ul class="menu__ul">
                 <hr class="menu__base__ul">
                 
-                <li class="menu__item"><a [routerLink]="['inicio']"  class="menu__link menu__link--active">INICIO</a></li>
+                <li class="menu__item"><a [routerLink]="['inicio']"  class="menu__link">INICIO</a></li>
                 <li class="menu__item"><a (click)="reserva()"   class="menu__link">BOOKING</a></li>
                 <li class="menu__item"><a [routerLink]="['joinup']" class="menu__link">UNETE</a></li>
 
                 <li class="menu__item"><a [routerLink]="['about']" class="menu__link">SOBRENOSOTROS</a></li>
 
                 <li class="menu__item">
-                    <a (click)="loguearse()" class="menu__link menu__link--login">Iniciar Sesión</a>
-                    <a (click)="registrer()" class="menu__link menu__link--login">Registrarse</a>
+                    <a   (click)="loguearse()" class="menu__link menu__link--login">Iniciar Sesión</a>
+                    <a   (click)="registrer()" class="menu__link menu__link--login">Registrarse</a>
                 </li>
 
                 <li class="menu__item menu__item--banderas">
@@ -37,6 +37,5 @@
 
    <img class="menu__responsive__button" src="assets/img/menu__responsive__img.png" alt="">
 </header> 
-
 
 
