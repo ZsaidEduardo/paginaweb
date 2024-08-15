@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
+import { CargarScriptService } from '../../services/cargar-script.service';
 
 @Component({
   selector: 'app-join-up',
@@ -11,7 +12,16 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class JoinUpComponent {
 
-  constructor(private router: Router){}
+  constructor(private router: Router,private _cargarScript: CargarScriptService){
+    
+    _cargarScript.carga(["header"]);
+    _cargarScript.carga(["pantallaDeCarga"]);
+    _cargarScript.carga(["idioma_banderas"]);
+    _cargarScript.carga(["configuraciones_idiomas/idioma_header"]);
+    _cargarScript.carga(["configuraciones_idiomas/idioma_unete"]);
+    _cargarScript.carga(["configuraciones_idiomas/idioma_footer"]);
+  }
+  
 
 
   formulario(){
