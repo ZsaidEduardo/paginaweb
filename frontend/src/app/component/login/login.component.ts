@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CargarScriptService } from '../../services/cargar-script.service';
 import { CommonModule } from '@angular/common';
+import { LoginService } from '../../services/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,13 +13,19 @@ import { CommonModule } from '@angular/common';
 })
 export class LoginComponent implements OnInit {
   isVisible: boolean = false;
-
+  email: string = '';
+  password: string = '';
   
 
-  constructor(  private _cargarScript: CargarScriptService) {
+  constructor(  private _cargarScript: CargarScriptService , private loginService:LoginService,
+    private router: Router) {
 
     _cargarScript.carga(["configuraciones_idiomas/idioma_login"]);
     _cargarScript.carga(["altura_login"]);
+
+    
+
+
   }
 
   ngOnInit() {
@@ -25,5 +33,11 @@ export class LoginComponent implements OnInit {
     this.isVisible = true;
   }
 
+
+  
+    
+  
+
+ 
 
 }
