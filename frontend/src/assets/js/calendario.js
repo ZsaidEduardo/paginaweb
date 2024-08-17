@@ -192,3 +192,10 @@ function seleccionarHora(hora, id){
 }
 
 
+
+
+/* java scrip 2 */
+
+
+
+

@@ -1,7 +1,7 @@
 if(localStorage.getItem("idioma") == "espanol"){
-    document.title = "Booking | SpraYL"
+    document.title = "BookingModel | SpraYL"
 }else{
-    document.title = "Booking | SpraYL"
+    document.title = "BookingModel | SpraYL"
 }
 
 /*-////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -28,12 +28,12 @@ var booking__form__titulo = document.querySelectorAll(".booking__form__titulo")
 
 var idiomaEspanol_booking_formTitulo = [
     "Selecciona tu carro",
-    "Detalles", 
+    "Detalles",
 ]
 
 var idiomaIngles_booking_formTitulo = [
     "Select your car",
-    "Details", 
+    "Details",
 ]
 
 recorrerIdioma(idiomaEspanol_booking_formTitulo, idiomaIngles_booking_formTitulo, booking__form__titulo)
@@ -45,15 +45,15 @@ var booking_form_labels = document.querySelectorAll(".booking__form__label");
 
 var idiomaEspanol_booking_formLabel = [
     "Marca", "Modelo", "Año", "Color",
-    "Nombre", "Apellido", "Correo Electrónico", 
-    "Número de Telefono", "¿Dónde desea el servicio?", 
+    "Nombre", "Apellido", "Correo Electrónico",
+    "Número de Telefono", "¿Dónde desea el servicio?",
     "Ciudad", "Estado", "Código Postal", "Alguna petición específica"
 ]
 
 var idiomaIngles_booking_formLabel = [
     "Make", "Model", "Year", "Color",
-    "Name", "Last Name", "Email", 
-    "Phone Number", "Where do you want the service?", 
+    "Name", "Last Name", "Email",
+    "Phone Number", "Where do you want the service?",
     "City", "State", "Zip Code", "Any specific request"
 ]
 
@@ -193,11 +193,11 @@ recorrerIdioma(idiomaEspanol_botonSiguiente_fechaYHora, idiomaIngles_botonSiguie
 var opciones_suciedad = document.querySelectorAll("#nivel_suciedad option")
 
 var idiomaEspanol_opcionesSuciedad = [
-    "Que tan sucio está tu carro", 
+    "Que tan sucio está tu carro",
     "Mantenimiento",
     "No está mal",
-    "Sucio", 
-    "Muy Sucio", 
+    "Sucio",
+    "Muy Sucio",
     "Extremadamente sucio"
 ]
 
@@ -282,7 +282,7 @@ var idiomaEspanol_parrafoPolitica = [
     "Prohibición de Entrega de Llaves al Sprayler",
     "Queda terminantemente prohibido entregar las llaves del vehículo al Sprayler. En caso de que el cliente decida entregar la llave por algún motivo, la compañía no se hará responsable de su pérdida o de que el vehículo quede cerrado con la llave dentro. Recomendamos encarecidamente que el cliente deje el vehículo abierto al menos 30 minutos antes del servicio para evitar la necesidad de entregar la llave.",
     "Al aceptar nuestros servicios de limpieza, el cliente acepta y está de acuerdo con los términos y condiciones de esta política.",
-    
+
     "Propósito: Estos términos y condiciones tienen como objetivo establecer las condiciones generales para la prestación de servicios por parte de SpraYL LLC, en adelante denominada “SpraYL,” a sus clientes, en adelante denominados “el cliente.” Al aceptar estos términos y condiciones, el cliente acepta todos los términos establecidos en el presente documento.",
     "Servicios Ofrecidos: La empresa se dedica a ofrecer servicios de detallado de vehículos móvil sin agua, en adelante denominados “los servicios.” La empresa se compromete a proporcionar los servicios con la diligencia y cuidado necesarios, de acuerdo con los estándares de calidad de la industria.",
     "Precio y Método de Pago: El precio de los servicios será el establecido en el sitio web www.sprayl.com. Los precios se expresarán en moneda local y estarán basados en estimados nunca precios fijos. El pago se realizará bajo las condiciones acordadas previamente entre la empresa y el cliente o a través del portal de pago en el sitio web www.sprayl.com.",
@@ -295,7 +295,7 @@ var idiomaEspanol_parrafoPolitica = [
     "Familiar: El cliente paga una tarifa de $24.99 al mes que le ofrece los beneficios de un descuento del 20% del precio regular, además de poder invitar hasta 5 amigos o familiares para mayor acumulación de puntos para gastar dentro de la misma en servicios o servicios extras. Estos puntos pueden ser transferidos o utilizados en otros vehículos que estén dentro de la cuenta familiar. También incluye el beneficio de solicitar el servicio de manera instantánea en la app.",
     "Ley Aplicable y Jurisdicción: Estos términos y condiciones se regirán e interpretarán de acuerdo con las leyes de los Estados Unidos de América. Cualquier disputa o reclamación que surja de o en conexión con estos términos y condiciones estará sujeta a la jurisdicción exclusiva de los tribunales competentes del Estado de Florida.",
     "Al aceptar estos términos y condiciones, el cliente acepta que ha leído y comprendido su contenido y los acepta en su totalidad.",
-    
+
     "En SpraYL, tomamos muy en serio la privacidad y protección de los datos personales de nuestros clientes y usuarios. Por ello, hemos desarrollado la siguiente política de privacidad para explicar cómo recopilamos, usamos, compartimos y protegemos la información personal que obtenemos a través de nuestros servicios y sitio web.",
     "Información Recopilada: Recopilamos información personal de nuestros clientes y usuarios, como nombre, dirección, correo electrónico, número de teléfono y detalles de pago, solo cuando se nos proporciona de manera voluntaria al registrarse en nuestra plataforma o al utilizar nuestros servicios. Además, podemos recopilar información técnica, como la dirección IP, el tipo de dispositivo y el navegador utilizado al acceder a nuestros servicios.",
     "Uso de la Información: Utilizamos la información personal que recopilamos para proporcionar nuestros servicios, procesar pagos, mejorar nuestros servicios y comunicarnos con nuestros clientes y usuarios. También podemos utilizar la información para personalizar nuestros servicios y publicidad, y para cumplir con las leyes y regulaciones aplicables.",
@@ -317,7 +317,7 @@ var idiomaIngles_parrafoPolitica = [
     "We appreciate our valued customers' understanding and cooperation regarding this additional time charge policy. We are committed to providing quality service and ensuring total customer satisfaction.",
     "If you have any questions or concerns about this policy, please feel free to contact us. We are here to provide you with the best vehicle cleaning experience possible.",
     "Thank you for choosing <span>Spra</span>YL!",
-    
+
     "Valuables in Vehicle Policy",
     "We appreciate our customers and understand that they may leave valuable personal items inside their vehicles. However, we are not responsible for the loss or damage of any valuable items found inside the vehicle during the cleaning service.",
     "To prevent possible loss or damage, we recommend that customers remove all valuable items before leaving their vehicle for cleaning. In the event that the customer decides to leave valuable items inside the vehicle, the company will not be held responsible and by agreeing to this policy, the customer is exonerating the company from any liability.",
@@ -326,7 +326,7 @@ var idiomaIngles_parrafoPolitica = [
     "Prohibition of Handing Over Keys to the Sprayer",
     "It is strictly forbidden to hand over the vehicle keys to the Sprayer. In the event that the client decides to hand over the key for any reason, the company will not be responsible for its loss or for the vehicle being locked with the key inside. We strongly recommend that the client leave the vehicle unlocked at least 30 minutes before the service to avoid the need to hand over the key.",
     "By accepting our cleaning services, the client accepts and agrees to the terms and conditions of this policy.",
-    
+
     "Purpose: These terms and conditions are intended to set forth the general conditions for the provision of services by SpraYL LLC, hereinafter referred to as “SpraYL,” to its clients, hereinafter referred to as “the client.” By accepting these terms and conditions, the client agrees to all the terms set forth herein.",
     "Services Offered: The company is engaged in offering waterless mobile vehicle detailing services, hereinafter referred to as “the services.” The company is committed to providing the services with the necessary diligence and care, in accordance with industry quality standards.",
     "Price and Payment Method: The price of the services will be as set forth on the website www.sprayl.com. Prices will be expressed in local currency and will be based on estimates, never fixed prices. Payment will be made under the conditions previously agreed between the company and the client or through the payment portal on the website www.sprayl.com.",
@@ -339,7 +339,7 @@ var idiomaIngles_parrafoPolitica = [
     "Family: The client pays a fee of $24.99 per month that offers the benefits of a 20% discount on the regular price, in addition to being able to invite up to 5 friends or family members for a greater accumulation of points to spend within the same account on services or extra services. These points can be transferred or used on other vehicles that are within the family account. It also includes the benefit of requesting the service instantly in the app.",
     "Applicable Law and Jurisdiction: These terms and conditions will be governed by and interpreted in accordance with the laws of the United States of America. Any dispute or claim arising out of or in connection with these terms and conditions shall be subject to the exclusive jurisdiction of the competent courts of the State of Florida.",
     "By accepting these terms and conditions, the customer agrees that he or she has read and understood their content and accepts them in their entirety.",
-    
+
     "At SpraYL, we take the privacy and protection of our customers' and users' personal data very seriously. Therefore, we have developed the following privacy policy to explain how we collect, use, share and protect the personal information we obtain through our services and website.",
     "Information Collected: We collect personal information from our customers and users, such as name, address, email, phone number and payment details, only when it is voluntarily provided to us when registering on our platform or when using our services. In addition, we may collect technical information, such as IP address, device type and browser used when accessing our services.",
     "Use of Information: We use the personal information we collect to provide our services, process payments, improve our services and communicate with our customers and users. We may also use the information to personalize our services and advertising, and to comply with applicable laws and regulations.",
@@ -405,16 +405,16 @@ function recorrerIdioma(arrayIdiomaEspanol, arrayIdiomaIngles, campos){
 
             for(var i =0; i<campos.length; i++){
 
-                campos[i].innerHTML = arrayIdiomaEspanol[i]  
-                  
+                campos[i].innerHTML = arrayIdiomaEspanol[i]
+
             }
 
         }else{
             campos[0].innerHTML= arrayIdiomaEspanol;
-          
+
         }
 
-        
+
 
     }else{
 
@@ -422,16 +422,16 @@ function recorrerIdioma(arrayIdiomaEspanol, arrayIdiomaIngles, campos){
 
             for(var i =0; i<campos.length; i++){
                 campos[i].innerHTML = arrayIdiomaIngles[i]
-    
+
             }
 
         }else{
             campos[0].innerHTML= arrayIdiomaIngles;
-          
+
         }
 
 
-        
+
     }
 
 

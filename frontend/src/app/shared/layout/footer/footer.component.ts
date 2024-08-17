@@ -1,18 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule],
+  imports: [RouterLink, RouterModule, CommonModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
 
   isVisible: boolean = true;
-  private hiddenRoutes = ['/login', '/signup', '/book','/forms'];
+  private hiddenRoutes = ['/login', '/signup', '/booking','/forms','/prueba'];
 
   constructor(private router: Router) {}
 

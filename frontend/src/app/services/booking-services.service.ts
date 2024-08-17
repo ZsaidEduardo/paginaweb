@@ -1,12 +1,13 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Booking } from '../model/booking';
+import { Booking } from '../models/BookingModel';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookingServicesService {
+
   urlbase:string="";
 
   constructor( private http : HttpClient) { }
@@ -22,8 +23,13 @@ export class BookingServicesService {
     }
 
     let body = JSON.stringify(booking); // Serializa el JSON
-    
+
     return this.http.post(this.urlbase + "", body, httpOption);
   }
+
+
+
+
+
 
 }

@@ -6,7 +6,6 @@ import { AboutComponent } from './component/about/about.component';
 import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { FormularioComponent } from './component/formulario/formulario.component';
-import { BookingFactureComponent } from './component/booking-facture/booking-facture.component';
 
 export const routes: Routes = [
 
@@ -18,8 +17,7 @@ export const routes: Routes = [
     {path: 'login', component :LoginComponent},
     {path: 'signup', component :SignupComponent},
     {path: 'forms', component :FormularioComponent},
-    {path: 'book', component :BookingFactureComponent},
-    
+
 
 
     { path: 'home', component: HomeComponent },
