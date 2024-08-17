@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { CargarScriptService } from '../../services/cargar-script.service';
 import { Booking } from '../../model/booking';
+import { CargarScriptService } from '../../services/cargar-script.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BookingServicesService } from '../../services/booking-services.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-booking',
+  selector: 'app-booking-facture',
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule,FormsModule],
-  templateUrl: './booking.component.html',
-  styleUrls: ['./booking.component.css']
+  imports: [FormsModule,CommonModule,ReactiveFormsModule],
+  templateUrl: './booking-facture.component.html',
+  styleUrl: './booking-facture.component.css'
 })
-export class BookingComponent {
-  
+export class BookingFactureComponent {
+
   bookingForm!: FormGroup;
 
   // Propiedades para el resumen
@@ -39,8 +39,6 @@ export class BookingComponent {
   constructor(private _cargarScript: CargarScriptService ,private fb: FormBuilder,
     private router:Router,private activatedRoute: ActivatedRoute, private _bookingService: BookingServicesService
    ) {
-
-    _cargarScript.carga(["bookingOriginal"]);
 
     //agregado
     this.bookingForm = this.fb.group({
@@ -111,7 +109,6 @@ export class BookingComponent {
   }
 
     /* CREAR FACTURA BOOKING */
-   
 
     crearBooking():void{
       this._bookingService.postBooking(this.booking).subscribe(
@@ -124,7 +121,6 @@ export class BookingComponent {
       
     }
     
- 
-
+    
 
 }

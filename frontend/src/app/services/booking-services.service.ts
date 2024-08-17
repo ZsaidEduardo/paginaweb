@@ -12,7 +12,7 @@ export class BookingServicesService {
   constructor( private http : HttpClient) { }
 
    //Servicio Crear booking
-   postLocal(booking: Booking): Observable<any> {
+   postBooking(booking: Booking): Observable<any> {
     const httpOption = {
       headers: new HttpHeaders({
         "Content-type": "application/json"

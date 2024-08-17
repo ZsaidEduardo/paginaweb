@@ -1,634 +1,23 @@
-.header__booking{
-  width: 100%;
-  background-color: #00a859;
-  z-index: 1000;
-}
-
-.main__booking{
-  max-width: 100vw;
-  overflow: hidden;
-  background-color: #000;
-}
-
-.main__booking__contenedor__sections{
-  width: 500%;
-  display: flex;
-  align-items: start;
-  transition: margin-left .5s;
-}
-
-.booking__section{
-  width: 100vw;
-
-}
-
-.volver_inicio_contenedor{
-  top: 30px;
-}
-
-/*---------------------*/
-
-.header__booking__top{
-  box-shadow: 0 0 2px 3px #00331b;
-  padding: 25px 0;
-  position: relative;
-}
-
-.header__booking__top h2{
-  width: 100%;
-  text-align: center;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #fff;
-  padding: 10px 0;
-}
-
-.header__booking__top hr{
-  display: block;
-  width: 100px;
-  margin: auto;
-  border: 2px solid #fff;
-}
-
-/*-----------------------*/
-
-.booking__state__range{
-  padding: 25px 0;
-  padding-bottom: 40px;
-}
-
-.booking__state__contenedor{
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  margin: auto;
-
-}
-
-.booking__item{
-  position: relative;
-}
-
-/*-----------*/
-
-
-.booking__state__line{
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  background-color: #fff;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-}
-
-.booking__line__progress{
-  width: 0%;
-  height: 4px;
-  background-color: #000;
-  transition: all .5s ;
-}
-
-.booking__state__circle{
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  background-color: #fff;
-  position: relative;
-  z-index: 10;
-  transition: all .5s .1s;
-  cursor: pointer;
-}
-
-.booking__state__circle--end{background-color: #398269;}
-.booking__state__circle--active{background-color: #000;}
-
-
-
-/*---*/
-
-.booking__state__contenedor--text{
-  width: 70%;
-}
-
-
-.booking__state__name{
-  width: 65px;
-  font-size: 1rem;
-  position: absolute;
-  margin-left: -10px;
-}
-
-.booking__state__name--fecha{
-  width: 120px;
-  font-size: 0.97rem;
-  margin-left: -30px;
-}
-
-/*///////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////// RESPONSIVE DESIGN SMARTPHONE //////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-@media (max-width: 700px) {
-
-  .header__booking{
-      max-width: 100vw;
-  }
-
-  .booking__section{
-      display: inline-block;
-      width: 100%;
-      max-width: 100vw;
-      height: 100%;
-  }
-  
-   
-  /*---------------------*/
-  
-  .header__booking__top{
-      box-shadow: 0 0 2px 3px #00331b;
-      padding: 25px 0;
-  }
-  
-  .header__booking__top h2{
-      font-size: 1.3rem;
-      font-weight: 700;
-      padding: 10px 0;
-  }
-  
-  .header__booking__top hr{
-      width: 70px;
-  }
-  
-  /*-----------------------*/
-  
-  .booking__state__range{
-      padding: 25px 0;
-      padding-bottom: 40px;
-  }
-  
-  .booking__state__contenedor{
-      width: 90%;
-
-  }
-      
-  /*-----------*/
-  
-  .booking__state__circle{
-      width: 20px;
-      height: 20px;
-  }
-  
-  .booking__state__circle--end{background-color: #398269;}
-  .booking__state__circle--active{background-color: #000;}
-  
-  
-  
-  /*---*/
-      
-  .booking__state__name{
-      width: 50px;
-      font-size: 0.65rem;
-  }
-
-  .booking__state__name--fecha{
-      width: 80px;
-      font-size: 0.60rem;
-      margin-left: -22px;
-  }
-  
-  
-
-  
-}
-
-
-
-.booking__section--extras{
-  padding: 50px;
-  padding-top: 150px;
-}
-
-.booking__extras__contenedor{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: start;
-}
-
-.booking__extra__item{
-  width: 27%;
-  position: relative;
-  margin-bottom: 50px;
-}
-
-.booking__extra__item img{
-  width: 100%;
-}
-
-.booking__item__titulo{
-  display: block;
-  color: #00a859;
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-top: 15px;
-  margin-bottom: 25px;
-}
-
-.booking__extra__item__details{
-  width: 100%;
-  color: #ffff;
-  margin: 10px 0;
-}
-
-.booking__extra__item__details[open]{
-  height: 300px;
-}
-
-.booking__extra__item__details summary{
-  color: #fff;
-  text-align: center;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
-.booking__extra__item__details summary::marker{
-  color: #fff;
-  position: absolute;
-  left: 0;
-}
-
-.booking__extra__item p{
-  color: #fff;
-  font-size: 0.90rem;
-  font-weight: 700;
-  text-align: justify;
-  line-height: 1.6;
-}
-
-.booking__button{
-  display: inline-block;
-  bottom: 15px;
-  border: none;
-  outline: none;
-  padding: 12px 15px;
-  font-size: 0.92rem;
-  color: #fff;
-  border-radius: 10px;
-  width: 49%;
-  cursor: pointer;
-  text-align: center;
-}
-
-.booking__button--agregar{background-color: #00a859;}
-.booking__button--quitar{background-color: #610000;}
-
-.booking__form__siguiente_button--2{
-  width: 50%;
-  margin: 50px auto;
-}
-
-.extra__etiqueta_agregado{
-  position: absolute;
-  top: 10px;
-  left: 0;  
-  padding: 8px 15px;
-  background-color: #cfcc00;
-  opacity: 0;
-  transition: opacity .25s;
-}
-
-.booking__lista__extras{
-  list-style: none;
-}
-
-.no_extras{
-  color: #ccc;
-}
-
-
-
-.extras_input{
-  display: none;
-}
-
-/*///////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////// RESPONSIVE DESIGN SMARTPHONE //////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-@media (max-width: 700px) {
-
-  .booking__section--extras{
-      width: 100vw;
-      max-width: 100%;
-      padding: 20px 10px;
-  }
-  
-  .booking__extras__contenedor{
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      align-items: stretch;
-  }
-  
-  .booking__extra__item{
-      width: 48%;
-      margin: auto;
-      height: auto;
-      position: relative;
-      margin-bottom: 50px;
-  }
-  
-  .booking__extra__item img{
-      display: block;
-      width: 100%;
-      margin: auto;
-  }
-  
-  .booking__extra__item span{
-      font-size: 0.67rem;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      text-align: center;
-      height: 30px;
-  }
-
-  .booking__extra__item__details[open]{
-      height: auto;
-  }
-  
-  .booking__extra__item p{
-      font-size: 0.65rem;
-      line-height: 2;
-  }
-  
-  .booking__button{
-      position: relative;
-      bottom: 0;
-      padding: 6px 10px;
-      width: 100%;
-      margin: 0;
-      margin-top: 5px;
-  }
-
-  .booking__extra__item__details summary{
-      font-size: 0.73rem;
-  }
-  
-  .booking__form__siguiente_button--2{
-      font-size: 0.7rem;
-      width: 100%;
-      margin: 50px auto;
-  }
-  
-  
-}
-
-
-.booking__section--fechaYHora{
-  padding: 30px 0;
-  padding-top: 0;
-}
-
-.contenedor_fechaYHora{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-/*--------------------------------------------*/
-
-.contenedor__calendario{
-  margin: auto;
-  width: 49%;
-}
-
-.calendario{
-  display: block;
-  margin: auto;
-  color: #fff;
-}
-
-.fc-daygrid-day {
-  cursor: pointer;
-}
-
-.fc .fc-daygrid-day-bg .fc-highlight{
-  background-color: transparent;
-}
-
-.fc .fc-daygrid-day.fc-day-today{
-  background-color: #333;
-}
-
-.fc .fc-button-primary:disabled{
-  display: none;
-}
-
-/*---------------------------------------------*/
-
-::-webkit-scrollbar{
-  background: #090909;
-  width: 9px;
-}
-::-webkit-scrollbar-thumb{
-   background: #ccc;
-   width: 11px;
-   border-radius: 5px;
-}
-
-/*--------------------------------------------*/
-
-.contenedor__section__horas{
-  width: 40%;
-  margin: 50px auto;
-  max-height: 85vh;
-  overflow-y: scroll;
-  padding: 50px 30px;
-  padding-top: 0;
-  padding-bottom: 0px;
-}
-
-.contenedor__categoria__horas{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 50px;
-}
-
-.horas__titulo{
-  text-align: center;
-  font-size: 1.7rem;
-  color: #fff;
-  margin-bottom: 50px;
-  font-weight: 700;
-}
-
-.contenedor_menu_horas{
-  display: flex;
-}
-
-.horas__categoria__titulo{
-  display: block;
-  font-size: 0.85rem;
-  color: #fff;
-  margin-bottom: 35px;
-  font-weight: 700;
-  border: 1px solid #fff;
-  padding: 12px 17px;
-  border-radius: 15px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.horas__categoria__titulo--active{
-  border: none;
-  background-color: #00a859;
-}
-
-.hora__item{
-  width: 30%;
-  color: #fff;
-  font-size: 0.87rem;
-  padding: 10px 20px;
-  border: 1px solid #fff;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  cursor: pointer;
-}
-
-.hora__item:hover{
-  background-color: #222;
-}
-
-/*---------------------*/
-
-.date__seleccionada{
-  display: none;
-}
-
-.error_fechaYHora{
-  display: block;
-  color: #890000;
-  width: 80%;
-  margin: auto;
-  font-size: 0.95rem;
-  font-weight: 700;
-  text-align: center;
-
-}
-
-/*///////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////// RESPONSIVE DESIGN SMARTPHONE //////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-@media (max-width: 700px) {
-
-  .booking__section--fechaYHora{
-      padding: 40px 0;
-  }
-
-  .contenedor_fechaYHora{
-      display: block;
-  }
-
-  .contenedor__calendario{
-      width: auto;
-  }
-
-  .calendario{
-      width: auto;
-  }
-  
-  .fc .fc-daygrid-day-number{
-      font-size: 0.72rem;
-  }
-
-  .fc .fc-button-primary:disabled{
-      font-size: 0.8rem;
-  }
-
-  .fc .fc-toolbar-title{
-      font-size: 1.2rem;
-  }
-
-  .row{
-      max-height: 70px;
-  }
-  /*--------------------------------------------*/
-  
-  
-  .contenedor__section__horas{
-      width: 95%;
-      max-height: 75vh;
-      padding: 30px 5px;
-      padding-bottom: 0;
-      margin: 30px auto;
-  }
-  
-  .contenedor__categoria__horas{
-      margin-bottom: 60px
-  }
-  
-  .horas__titulo{
-      font-size: 0.9rem;
-      margin-bottom: 35px;
-  }
-  
-  .horas__categoria__titulo{
-      font-size: 0.72rem;
-      margin-bottom: 30px;
-      padding: 10px 15px;
-      margin-right: 7px;
-  }
-  
-  .hora__item{
-      width: 30%;
-      font-size: 0.65rem;
-      padding: 8px 15px;
-      margin-bottom: 10px;
-  }
-
-  /*-------------------------*/
-
-  .error_fechaYHora{
-      width: 80%;
-      font-size: 0.87rem;
-  
-  }
-
-
-}
-
-
-.booking__section--booking{
-  padding: 50px 100px;
-}
-
-.booking__form{
-  width: 50%;
+/* Ajustes generales para el formulario */
+.booking__form {
+  width: 90%;
+  max-width: 800px; /* Aumentar el ancho máximo para el formulario */
   margin: auto;
   background-color: #00a859;
   padding: 35px 30px;
+  border-radius: 10px;
 }
 
-.booking__form__titulo{
+/* Estilo para el título de los formularios */
+.booking__form__titulo {
   font-size: 1.5rem;
   font-weight: 700;
   color: #fff;
   margin-bottom: 25px;
 }
 
-.booking__form__label{
+/* Estilo para las etiquetas de los campos */
+.booking__form__label {
   display: block;
   font-size: 1.1rem;
   font-weight: 700;
@@ -637,7 +26,8 @@
   margin-bottom: 10px;
 }
 
-.booking__form__input, .booking__form__textarea{
+/* Estilo para los campos de entrada */
+.booking__form__input {
   width: 100%;
   padding: 12px 25px;
   background-color: #000;
@@ -647,20 +37,14 @@
   margin-bottom: 25px;
   font-size: 1rem;
   color: #fff;
-  resize: none;
 }
 
-.booking__form__input:focus, .booking__form__textarea:focus{
+.booking__form__input:focus {
   outline: 2px solid #fff;
 }
 
-
-.booking__form__input::placeholder{
-  font-size: 0.95rem;
-  color: #747474;
-}
-
-.booking__form__siguiente_button{
+/* Estilo para los botones de navegación */
+.booking__form__siguiente_button {
   display: block;
   width: 60%;
   margin: auto;
@@ -672,633 +56,217 @@
   font-size: 1.1rem;
   text-decoration: none;
   border-radius: 25px;
+  cursor: pointer;
 }
 
-
-/*////////////////////// DETALLES //////////////////////////////*/
-
-.booking__section--detalles{
-  padding: 50px 100px;
+.booking__form__siguiente_button:hover {
+  background-color: #ddd;
 }
 
-.booking__section--detalles .booking__form{
-  width: 82%;
-  padding: 50px 100px;
+/*-------------------------------------------*/
+/* Estilo para la sección de extras */
+.booking__section--extras {
+  background-color: #f4f4f4; /* Fondo más claro para diferenciar */
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  max-width: 800px; /* Ancho máximo del contenedor de extras */
+  margin-left: auto; /* Centrar horizontalmente */
+  margin-right: auto; /* Centrar horizontalmente */
 }
 
-
-.booking__section--detalles .booking__form__titulo{
-  text-align: center;
-  margin-bottom: 75px;
-  font-size: 2rem;
-  letter-spacing: .5px;
-}
-
-.contenedor__formulario__inputs{
+/* Contenedor de los extras con diseño flexible */
+.booking__extras__contenedor {
   display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
   justify-content: space-between;
 }
-.booking__form__input--50{
-  width: 40%;
-}
-.booking__form__input--33{
-  width: 25%;
-}
 
-.booking__section--detalles .booking__form__label{
-  font-size: 0.95rem;
+/* Estilo para cada ítem de extra */
+.booking__extra__item {
+  flex: 1 1 calc(33.333% - 15px); /* 3 ítems por fila con espacio */
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   text-align: center;
-  margin-bottom: 25px;
 }
 
-.booking__section--detalles .booking__form__input{
-  margin-bottom: 60px;
-  font-size: 0.82rem;
+/* Estilo para las imágenes de los extras */
+.booking__extra__item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-.booking__section--detalles .booking__form__input:focus{
-  outline: 2px solid #fff;
+/* Estilo para el título de cada ítem extra */
+.booking__item__titulo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
 }
 
-.booking__form select{
-  display: block;
-  width: 35%;
-  margin: 50px auto;
-  margin-bottom: 75px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  outline: none;
-  padding: 20px 25px;
-  font-size: 0.87rem;
-  border-radius: 15px;
+/* Estilo para los detalles de cada ítem extra */
+.booking__extra__item__details {
+  margin-bottom: 10px;
+}
+
+.booking__extra__item__details summary {
+  cursor: pointer;
   font-weight: 700;
 }
 
-.booking__form__textarea{
-  height: 200px;
-  padding: 15px 30px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  font-size: 0.85rem;
-  margin-bottom: 30px;
-}
-
-.booking__contenedor__checkbox{
-  margin: 25px 0;
-  display: flex;
-}
-
-.booking__contenedor__checkbox input{
-  margin-right: 10px;
-  accent-color: #000;
-}
-
-.booking__contenedor__checkbox label{
-  color: #fff;
+/* Estilos para los botones de agregar y quitar extras */
+.booking__button {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 5px;
   font-size: 1rem;
-  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
 }
 
-.booking__contenedor__checkbox label span{
- text-decoration: underline;
- cursor: pointer;
+.booking__button--agregar {
+  background-color: #00a859;
+  color: #fff;
 }
 
-
-/*-----------------------*/
-
-.booking__form__siguiente_button--4{
-  width: 40%;
-  margin: 50px auto;
-  margin-top: 100px;
-  font-size: 0.8rem;
-  padding: 20px 0;
-  font-weight: 700;
+.booking__button--agregar:hover {
+  background-color: #008c4f;
 }
 
-/*--------------------------------VENTANAS MODALES -----------------------------------*/
+.booking__button--quitar {
+  background-color: #f44336;
+  color: #fff;
+}
 
-.contenedor__ventanaModal__politicas{
+.booking__button--quitar:hover {
+  background-color: #c62828;
+}
+
+/* Estilo para la etiqueta de agregado */
+.extra__etiqueta_agregado {
+  display: block;
+  font-size: 0.9rem;
+  color: #00a859;
+  margin-top: 10px;
+}
+
+/* Estilo para el campo de comentario adicional */
+.extras_input {
   width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10000000;
-  background-color: rgba(0,0,0, 50%);
-  padding: 5vh 50px;
-  display: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 15px;
 }
 
-.contenedor__politica{
-  position: relative;
-  max-height: 90vh;
-  background-color: #000;
-  padding: 50px 80px;
-  width: 60%;
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .booking__extra__item {
+      flex: 1 1 calc(50% - 15px); /* 2 ítems por fila */
+  }
+}
+
+@media (max-width: 480px) {
+  .booking__extra__item {
+      flex: 1 1 100%; /* 1 ítem por fila en pantallas muy pequeñas */
+  }
+}
+
+
+/*del detalles*/
+.booking__formdetalles {
+  width: 90%;
+  max-width: 800px; /* Aumentar el ancho máximo para el formulario */
   margin: auto;
-  overflow-y: scroll;
-  display: none;
+  background-color: #00a859;
+  padding: 35px 30px;
+  border-radius: 10px;
+  height: 1000px;
+}
+
+/*detalle resumen*/
+/* formulario.component.css */
+.booking__section--resumen {
+  background-color: #f9f9f9;
+  padding: 20px;
   border-radius: 10px;
 }
 
-.titulo__politica{
-  text-align: center;
-  color: #fff;
-  margin-bottom: 100px;
-  font-size: 2.1rem;
-  margin-bottom: 50px;
-}
-
-.parrafo__politica{
-  font-size: 0.85rem;
-  font-weight: 700;
-  line-height: 1.6;
-  color: #fff;
-  text-align: justify;
-  margin-bottom: 20px;
-}
-
-.cerrar_boton_ventanaModal{
-  position: absolute;
-  width: 30px;
-  top: 20px;
-  left: 20px;
-  cursor: pointer;
-}
-
-/*///////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////// RESPONSIVE DESIGN SMARTPHONE //////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-@media (max-width: 700px) {
-
-  .booking__section--booking{
-      padding: 50px 0px;
-  }
-  
-  .booking__form{
-      width: 95%;
-      padding: 30px 20px;
-  }
-  
-  .booking__form__titulo{
-      font-size: 0.9rem;
-      margin-bottom: 25px;
-  }
-  
-  .booking__form__label{
-      font-size: 0.77rem;
-  }
-  
-  .booking__form__input{
-      margin-bottom: 20px;
-      font-size: 0.72rem;
-  }
-  
-  .booking__form__input::placeholder{
-      font-size: 0.8rem;
-  }
-
-  .booking__form__siguiente_button{
-      font-size: 0.72rem;
-  }
-      
-  /*////////////////////////////////////////////////////*/
-  
-  .booking__section--detalles{
-      padding: 50px 0px;
-  }
-  
-  .booking__section--detalles .booking__form{
-      width: 95%;
-      padding: 40px 30px;
-  }
-   
-  .booking__section--detalles .booking__form__titulo{
-      margin-bottom: 50px;
-      font-size: 1.2rem;
-  }
-
-  .contenedor__formulario__inputs{
-      align-items: end;
-  }
-  
-  .booking__form__input--50{
-      width: 47%;
-  }
-  .booking__form__input--33{
-      width: 30%;
-  }
-  
-  .booking__section--detalles .booking__form__label{
-      font-size: 0.77rem;
-      margin-bottom: 15px;
-  }
-  
-  .booking__section--detalles .booking__form__input{
-      margin-bottom: 40px;
-      padding: 8px 12px;
-      font-size: 0.75rem;
-  }
-  
-  
-  .booking__form select{
-      width: 100%;
-      margin: 20px auto;
-      margin-bottom: 30px;
-      font-size: 0.75rem;
-  }
-  
-  .booking__form__textarea{
-      height: 120px;
-      font-size: 0.72rem;
-  }
-  
-
-  .booking__contenedor__checkbox label{
-      font-size: 0.72rem;
-  }
-     
-  
-  /*-----------------------*/
-  
-  .booking__form__siguiente_button--4{
-      width: 60%;
-      margin: 40px auto;
-      margin-top: 50px;
-      padding: 15px 20px;
-      font-size: 0.70rem;
-  }
-  
-  /*--------------------------------VENTANAS MODALES -----------------------------------*/
-
-  .contenedor__ventanaModal__politicas{
-      padding: 5vh 20px;
-  }
-  
-  .contenedor__politica{
-      max-height: 95vh;
-      padding: 40px 30px;
-      width: 95%;
-  }
-  
-  .titulo__politica{
-      font-size: 1.9rem;
-      margin-bottom: 30px;
-  }
-  
-  .parrafo__politica{
-      font-size: 0.80rem;
-  }
-  
-  .cerrar_boton_ventanaModal{
-      width: 20px;
-      top: 15px;
-      left: 15px;
-  }
-  
-  
-}
-
-.booking__section--resumen{
-  padding: 50px;
-}
-
-.resumen__contenedor{
-  width: 50%;
-  margin: 0 auto;
-  color: #fff;
-  background-color: #00a859;
-  padding: 50px 0px;
-  position: relative;
-}
-
-.resumen__titulo{
-  text-align: center;
-  font-size: 2.2rem;
-  font-weight: 700;
-}
-
-.resumen__producto__nombre{
-  display: block;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-top: 35px;
-  margin-bottom: 25px;
-}
-
-.resumen__row{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 30px;
-}
-
-.resumen__row__item{
-  font-size: 0.97rem;
-  font-weight: 700;
-}
-
-.resumen__divisor{
+.resumen__contenedor {
   width: 90%;
+  max-width: 800px;
   margin: auto;
-  height: 1px;
-  background-color: #fff;
-  margin:  50px 30px;
 }
 
-.resumen__divisor--grande{
-  width: 100%;
-  background-color: #000;
-  height: 80px;
-  border: 1px solid #000;
-  margin: 50px 0;
-}
-
-.booking__button__submit{
-  display: block;
-  width: 30%;
-  margin: 50px auto;
-  border: 2px solid transparent;
-  outline: none;
-  font-size: 0.92rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 15px 0;
-  letter-spacing: 0.5px;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all .5s;
-}
-
-.booking__button__submit:hover{
-  color: #00a859;
-  border: 2px solid #00a859;
-  background-color: transparent;
-}
-
-.id_pedido{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #000;
-  letter-spacing: 1px;
-}
-
-.resumen__input{
-  border: none;
-  outline: none;
-  padding: 10px 12px;
-  font-size: 0.8rem;
-  color: #fff;
-  background-color: #000;
-  border-radius: 15px;
-  text-align: center;
-}
-
-/*///////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////// RESPONSIVE DESIGN SMARTPHONE //////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-@media (max-width: 700px) {
-
-  .booking__section--resumen{
-      padding: 25px 10px;
-  }
-  
-  .resumen__contenedor{
-      width: 100%;
-      padding: 40px 0px;
-  }
-  
-  .resumen__titulo{
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-  }
-  
-  .resumen__producto__nombre{
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-top: 30px;
-      margin-bottom: 50px;
-  }
-  
-  .resumen__row{
-      padding: 10px 15px;
-  }
-  
-  .resumen__row__item{
-      font-size: 0.72rem;
-  }
-
-  .resumen__dato{
-      font-size: 0.67rem;
-      color: #ddd;
-  }
-  
-  .resumen__divisor{
-      margin: 25px 0;
-      width: 100%;
-  }
-  
-  .resumen__divisor--grande{
-      height: 50px;
-      margin: 35px 0;
-  }
-
-  .booking__button__submit{
-      width: 70%;
-      margin: 40px auto;
-      font-size: 0.75rem;
-  }
-  
-  .id_pedido{
-      font-size: 0.65rem;
-  }
-
-  .resumen__input{
-      font-size: 0.68rem;
-  }
-  
-}
-
-
-
-.booking__section--resumen{
-  padding: 50px;
-}
-
-.resumen__contenedor{
-  width: 50%;
-  margin: 0 auto;
-  color: #fff;
-  background-color: #00a859;
-  padding: 50px 0px;
-  position: relative;
-}
-
-.resumen__titulo{
-  text-align: center;
-  font-size: 2.2rem;
-  font-weight: 700;
-}
-
-.resumen__producto__nombre{
-  display: block;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-top: 35px;
-  margin-bottom: 25px;
-}
-
-.resumen__row{
+.resumen__row {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 10px 30px;
+  margin-bottom: 10px;
 }
 
-.resumen__row__item{
-  font-size: 0.97rem;
-  font-weight: 700;
+.resumen__row__item--caracteristica {
+  font-weight: bold;
 }
 
-.resumen__divisor{
-  width: 90%;
-  margin: auto;
-  height: 1px;
-  background-color: #fff;
-  margin:  50px 30px;
+.resumen__dato {
+  font-size: 1rem;
 }
 
-.resumen__divisor--grande{
-  width: 100%;
-  background-color: #000;
-  height: 80px;
-  border: 1px solid #000;
-  margin: 50px 0;
-}
-
-.booking__button__submit{
+.booking__button__submit {
   display: block;
-  width: 30%;
-  margin: 50px auto;
-  border: 2px solid transparent;
-  outline: none;
-  font-size: 0.92rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 15px 0;
-  letter-spacing: 0.5px;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all .5s;
-}
-
-.booking__button__submit:hover{
-  color: #00a859;
-  border: 2px solid #00a859;
-  background-color: transparent;
-}
-
-.id_pedido{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #000;
-  letter-spacing: 1px;
-}
-
-.resumen__input{
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
   border: none;
-  outline: none;
-  padding: 10px 12px;
-  font-size: 0.8rem;
-  color: #fff;
-  background-color: #000;
-  border-radius: 15px;
-  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-/*///////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////// RESPONSIVE DESIGN SMARTPHONE //////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-@media (max-width: 700px) {
-
-  .booking__section--resumen{
-      padding: 25px 10px;
-  }
-  
-  .resumen__contenedor{
-      width: 100%;
-      padding: 40px 0px;
-  }
-  
-  .resumen__titulo{
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-  }
-  
-  .resumen__producto__nombre{
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-top: 30px;
-      margin-bottom: 50px;
-  }
-  
-  .resumen__row{
-      padding: 10px 15px;
-  }
-  
-  .resumen__row__item{
-      font-size: 0.72rem;
-  }
-
-  .resumen__dato{
-      font-size: 0.67rem;
-      color: #ddd;
-  }
-  
-  .resumen__divisor{
-      margin: 25px 0;
-      width: 100%;
-  }
-  
-  .resumen__divisor--grande{
-      height: 50px;
-      margin: 35px 0;
-  }
-
-  .booking__button__submit{
-      width: 70%;
-      margin: 40px auto;
-      font-size: 0.75rem;
-  }
-  
-  .id_pedido{
-      font-size: 0.65rem;
-  }
-
-  .resumen__input{
-      font-size: 0.68rem;
-  }
-  
+.booking__button__submit:hover {
+  background-color: #0056b3;
 }
-      
 
-/*volviendo*/
+
+/*header del booking*/
+.header__booking__top2 {
+  display: flex;
+  align-items: center; /* Alinea verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  box-shadow: 0 0 2px 3px #00331b;
+  padding: 15px 0; /* Ajustado para un mejor espaciado */
+  background: #00a859;
+  margin-bottom: 15px;
+}
+
+.header__booking__top2 .volver_inicio_contenedor2 {
+  position: absolute; /* Permite que se posicione fuera del flujo del contenido */
+  top: 15px; /* Ajusta la distancia desde la parte superior */
+  left: 15px; /* Ajusta la distancia desde la parte izquierda */
+}
+
+.header__booking__top2 h2 {
+  margin: 0; /* Elimina el margen por defecto */
+  padding: 5px 0; /* Ajusta el padding */
+  font-size: 1.8rem; /* Tamaño del texto ajustado */
+  color: #ffffff;
+}
+
+.header__booking__top2 hr {
+  width: 100px;
+  margin: 10px auto; /* Ajusta el margen para centrar */
+  border: 2px solid #fff;
+}
+
 .volver_inicio_contenedor {
   position: fixed;
   top: 10px;
@@ -1318,78 +286,280 @@
   width: 30px; /* Ajusta el tamaño de la imagen para que se ajuste bien dentro del círculo */
   height: auto; /* Mantiene la proporción de la imagen */
 }
-/*-----------------------*/
 
 
-
-
-
-
-.booking-form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/*fondo de cada forms*/
+.booking__form1 {
+  width: 90%;
+  max-width: 580px; /* Aumentar el ancho máximo para el formulario */
+  margin: auto;
+  background-color: #00a859;
+  padding: 35px 30px;
+  border-radius: 10px;
+ 
 }
 
-.booking-form__title {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.5em;
-  color: #333;
+/*forms2 estilos*/
+.booking__form3 {
+  width: 90%;
+  max-width: 900px; /* Aumentar el ancho máximo para el formulario */
+  height: 350px;
+  margin: auto;
+  background-color: #00a859;
+  padding: 35px 30px;
+  border-radius: 10px;
+ 
 }
 
-.booking-form__container {
-  display: flex;
-  flex-direction: column;
-}
-
-.booking-form__field {
-  margin-bottom: 15px;
-}
-
-.booking-form__label {
+.booking-form__label2{
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #070606;
+  letter-spacing: 1px;
+  margin-bottom: 9px;
+
 }
 
-.booking-form__input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.booking-form__label22{
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #070606;
+  letter-spacing: 1px;
+  margin-bottom: 9px;
+  margin-left: 23px;
+
 }
 
-.booking-form__turnos {
+.booking-form__title-container {
   display: flex;
-  gap: 20px;
+  justify-content: center; /* Centra horizontalmente */
+  padding: 20px; /* Espaciado alrededor del título */
 }
 
-.booking-form__turnos label {
-  display: flex;
-  align-items: center;
-  font-size: 1em;
+.booking-form__title222 {
+  font-family: 'Roboto', sans-serif; /* Tipografía moderna */
+  font-size: 2rem; /* Tamaño del texto */
+  font-weight: 700; /* Grosor del texto */
+  color: #070707; /* Color del texto */
+  text-transform: uppercase; /* Letras en mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  padding-bottom: 10px; /* Espaciado debajo del texto para la línea */
+  margin: 0; /* Elimina el margen predeterminado */
+  text-align: center; /* Alinea el texto al centro */
+  transition: color 0.3s, border-color 0.3s; /* Efecto de transición para el color y la línea */
 }
 
-.booking-form__button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
+
+.input_hora1 {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  max-width: 400px; /* Máximo ancho del campo */
+  padding: 10px; /* Espaciado interno del campo */
+  font-size: 1.1rem; /* Tamaño de la fuente */
+  border: 2px solid #007BFF; /* Borde del campo */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+  outline: none; /* Elimina el borde de enfoque predeterminado */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transiciones suaves para el borde y la sombra */
+}
+
+.input_hora1:focus {
+  border-color: #0056b3; /* Cambia el color del borde al enfocar */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al enfocar */
+}
+
+.input_hora1__label {
+  display: block; /* Asegura que la etiqueta esté en una línea separada */
+  margin-bottom: 8px; /* Espaciado debajo de la etiqueta */
+  font-size: 1rem; /* Tamaño de la fuente de la etiqueta */
+  color: #333; /* Color del texto de la etiqueta */
+}
+
+
+/*radious*/
+.booking-form__label2222{
+  margin-left: 15px;
+}
+
+.booking-form__label2222 input[type="radio"]:checked::before {
+  content: ''; /* Añade un pseudo-elemento */
+  position: absolute; /* Posición absoluta dentro del radio */
+  top: 50%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  width: 10px; /* Tamaño del punto interior */
+  height: 10px; /* Tamaño del punto interior */
+  background-color: #007BFF; /* Color del punto interior cuando está seleccionado */
+  border-radius: 50%; /* Hace que el punto sea circular */
+  transform: translate(-50%, -50%); /* Centra el punto */
+}
+
+.booking-form__label2222:hover input[type="radio"] {
+  border-color: #0056b3; /* Cambia el color del borde al pasar el ratón */
+}
+/**/
+/*ESTILOS DEL FORMS4*/
+.booking__form4{
+  width: 90%;
+  max-width: 600px; /* Aumentar el ancho máximo para el formulario */
+  margin: auto;
+  background-color: #00a859;
+  padding: 35px 30px;
+  border-radius: 10px;
+}
+
+.booking__detalles__input4{
+  .booking__detalles__input4 {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  max-width: 300px; /* Ancho máximo para evitar que se expanda demasiado */
+  padding: 10px; /* Espaciado interno del campo */
+  font-size: 1rem; /* Tamaño de la fuente */
+  border: 2px solid #007BFF; /* Borde del campo */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #fff; /* Color de fondo blanco */
+  color: #333; /* Color del texto */
+  outline: none; /* Elimina el borde de enfoque predeterminado */
+  appearance: none; /* Elimina el estilo predeterminado del navegador */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+.booking__detalles__input4:focus {
+  border-color: #0056b3; /* Cambia el color del borde al enfocar */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al enfocar */
+}
+
+/* Opcional: estilos adicionales para el contenedor del select */
+.booking__detalles__label {
+  display: block; /* Asegura que la etiqueta esté en una línea separada */
+  margin-bottom: 8px; /* Espaciado debajo de la etiqueta */
+  font-size: 1rem; /* Tamaño de la fuente de la etiqueta */
+  color: #333; /* Color del texto de la etiqueta */
+}
+
+}
+
+
+/*forms4 estilos*/
+
+.booking__detalles__input4 {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  max-width: 300px; /* Ancho máximo para evitar que se expanda demasiado */
+  padding: 10px; /* Espaciado interno del campo */
+  font-size: 1rem; /* Tamaño de la fuente */
+  border: 2px solid #007BFF; /* Borde del campo */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #fff; /* Color de fondo blanco */
+  color: #333; /* Color del texto */
+  outline: none; /* Elimina el borde de enfoque predeterminado */
+  appearance: none; /* Elimina el estilo predeterminado del navegador */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+.booking__detalles__input4:focus {
+  border-color: #0056b3; /* Cambia el color del borde al enfocar */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al enfocar */
+}
+
+/* Opcional: estilos adicionales para el contenedor del select */
+.booking__detalles__label {
+  display: block; /* Asegura que la etiqueta esté en una línea separada */
+  margin-bottom: 8px; /* Espaciado debajo de la etiqueta */
+  font-size: 1rem; /* Tamaño de la fuente de la etiqueta */
+  color: #333; /* Color del texto de la etiqueta */
+}
+
+
+
+/*politicas*/
+
+
+/* Modal styles */
+/* Estilos para el enlace */
+.booking__politica__link {
+  color: #070247; /* Azul medio fuerte */
+  font-size: 19px; /* Tamaño de fuente */
+  text-decoration: underline; /* Subrayar el texto */
+  cursor: pointer; /* Cambiar el cursor a una mano al pasar el ratón */
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Ocultar el modal por defecto */
+  position: fixed; /* Fijar el modal */
+  z-index: 1; /* Asegurarse de que esté por encima de otros elementos */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ancho completo de la pantalla */
+  height: 100%; /* Alto completo de la pantalla */
+  overflow: auto; /* Hacer scroll si es necesario */
+  background-color: rgba(0,0,0,0.4); /* Fondo semi-transparente */
+}
+
+.modal-content {
+  background-color: #fefefe; /* Fondo blanco para el contenido del modal */
+  margin: 15% auto; /* Centrar el modal en la pantalla */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Ancho del modal */
+  max-width: 600px; /* Tamaño máximo */
+}
+
+.close {
+  color: #aaa; /* Color del botón de cierre */
+  float: right; /* Posicionar a la derecha */
+  font-size: 28px; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+}
+
+.close:hover,
+.close:focus {
+  color: black; /* Color del botón al pasar el ratón */
+  text-decoration: none;
   cursor: pointer;
-  font-size: 1em;
-  transition: background-color 0.3s ease;
 }
 
-.booking-form__button:hover {
-  background-color: #0056b3;
+/* ESTILOS DEL FORMULARIO FACTURA */
+
+.resumen__titulo{
+  margin-top: 15px;
+  margin-left: 228px;
+}
+/* Contenedor del formulario para centrar el botón */
+.form-container {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
 }
 
-.booking-form__button:disabled {
-  background-color: #ddd;
-  cursor: not-allowed;
+/* Estilo del botón */
+.enviarFormulario {
+  background-color: #007bff; /* Color de fondo azul fuerte */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de la fuente */
+  cursor: pointer; /* Cambiar el cursor a una mano al pasar el ratón */
+  transition: background-color 0.3s, transform 0.2s; /* Efectos de transición */
+}
+
+/* Estilo del botón al pasar el ratón por encima */
+.enviarFormulario:hover {
+  background-color: #0056b3; /* Color de fondo más oscuro al pasar el ratón */
+  transform: scale(1.05); /* Aumentar ligeramente el tamaño */
+}
+
+/* Estilo del botón al hacer clic */
+.enviarFormulario:active {
+  background-color: #004085; /* Color de fondo aún más oscuro al hacer clic */
+  transform: scale(0.98); /* Reducir ligeramente el tamaño */
+}
+
+
+.booking__section55{
+  color: #000;
+  font-size: 23px;
+  background: linear-gradient(to right, #3a6605, #295f10); /* Gradiente verde claro a verde oscuro */
 }

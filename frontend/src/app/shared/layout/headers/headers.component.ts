@@ -14,7 +14,7 @@ export class HeadersComponent  {
 
   isVisible: boolean = true;
   
-  private hiddenRoutes = ['/login', '/signup' , '/booking','/forms'];
+  private hiddenRoutes = ['/login', '/signup' , '/booking','/forms', '/book'];
 
   constructor( private router: Router, private _cargarScript: CargarScriptService) {
 
@@ -50,7 +50,7 @@ export class HeadersComponent  {
   }
 
   reserva():void{
-    this.router.navigate(['booking']);
+    this.router.navigate(['book']);
   }
 
 
