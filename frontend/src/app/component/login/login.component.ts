@@ -11,21 +11,16 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent implements OnInit {
-  isVisible: boolean = false;
-  email: string = '';
-  password: string = '';
+export class LoginComponent  {
+  
+   isVisible: boolean = false;
+
   
 
-  constructor(  private _cargarScript: CargarScriptService , private loginService:LoginService,
-    private router: Router) {
+  constructor(  private _cargarScript: CargarScriptService) {
 
     _cargarScript.carga(["configuraciones_idiomas/idioma_login"]);
     _cargarScript.carga(["altura_login"]);
-
-    
-
-
   }
 
   ngOnInit() {
@@ -34,10 +29,15 @@ export class LoginComponent implements OnInit {
   }
 
 
+  }
+
+  
+
+
   
     
   
 
  
 
-}
+
