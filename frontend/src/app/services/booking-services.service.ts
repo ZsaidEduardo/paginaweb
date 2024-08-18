@@ -8,12 +8,12 @@ import { Observable } from 'rxjs';
 })
 export class BookingServicesService {
 
-  urlbase:string="";
+  urlbase:string="http://127.0.0.1:8000/api/Booking";
 
   constructor( private http : HttpClient) {}
 
    //Servicio Crear booking
-   postBooking(booking: Booking): Observable<any> {
+   postBooking(booking: Object): Observable<any> {
     const httpOption = {
       headers: new HttpHeaders({
         "Content-type": "application/json"

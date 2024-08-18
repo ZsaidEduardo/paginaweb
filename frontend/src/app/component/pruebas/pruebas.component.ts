@@ -146,7 +146,29 @@ booking = new Booking();
 accion: string = "new";
 
 
-
+bookingData = {
+  marca: this.marca,
+  modelo: this.modelo,
+  anio: this.anio,
+  color: this.color,
+  servicio_extra: this.servicio_extra,
+  nombre: this.nombre,
+  fecha: this.fecha,
+  nombre_cliente: this.nombre_cliente,
+  apellido_cliente: this.apellido_cliente,
+  email: this.email,
+  telefono_cliente: this.telfono_cliente,
+  direccion_cliente: this.direccion_cliente,
+  ciudad_cliente: this.ciudad_cliente,
+  estado_servico: this.estado_servicio,
+  codigo_postal_cliente: this.codigo_postal,
+  peticion_cliente: this.peticion_cliente,
+  descripcion_servicio: this.descripcion_servicio,
+  dirt_charges: false,
+  acepto_veicle: false,
+  la_tos: null,
+  fecha_servicio: this.fecha_servicio
+};
 
   constructor(private _cargarScript: CargarScriptService ,private fb: FormBuilder,
     private router:Router,private activatedRoute: ActivatedRoute, private _bookingService: BookingServicesService
@@ -169,13 +191,11 @@ accion: string = "new";
   }
 
 
-  onSubmit(): void {
-    console.log(this.bookingForm);
-
-
+  postBookingData(): void {
     if (this.bookingForm.valid) {
       // Maneja el envío del formulario aquí
 
+      this.bookingService.postBooking(this.bookingData);
     }
   }
 

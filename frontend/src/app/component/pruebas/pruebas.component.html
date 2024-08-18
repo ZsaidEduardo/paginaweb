@@ -171,7 +171,7 @@
         <section class="booking-form">
             <h3 class="booking-form__title222">Reserve your date</h3>
 
-            <form (ngSubmit)="onSubmit()" [formGroup]="bookingForm" class="booking-form__container">
+            <form [formGroup]="bookingForm" class="booking-form__container">
 
                 <!-- Selección de Fecha -->
                 <div class="booking-form__field">
@@ -538,7 +538,7 @@
                 <span class="resumen__row__item resumen__dato" id="total__dato"></span>
             </div>
 
-            <button class="booking__button__submit">Confirmar Reserva</button>
+            <button onclick="postBookingData()" class="booking__button__submit">Confirmar Reserva</button>
         </div>
     </div>
 
