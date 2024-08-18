@@ -49,7 +49,7 @@
 
 <main class="main__booking">
 
-    <form class="main__booking__contenedor__sections" method="post" action="">
+    <form [formGroup]="bookingForm" class="main__booking__contenedor__sections">
 
 
         <!------------------ BOOKING ---------------------------->
@@ -61,18 +61,18 @@
                 <h3 class="booking__form__titulo">Selecciona tu carro</h3>
 
                 <label class="booking__form__label" for="">Marca</label>
-                <input class="booking__form__input" id="marca" type="text" name="marca">
+                <input formControlName="marca" class="booking__form__input" id="marca" type="text" name="marca">
 
                 <label class="booking__form__label" for="">Modelo</label>
-                <input class="booking__form__input" id="modelo" type="text" name="modelo">
+                <input formControlName="modelo" class="booking__form__input" id="modelo" type="text" name="modelo">
 
 
                 <label class="booking__form__label" for="">Año</label>
-                <input class="booking__form__input" id="anio" type="number" name="anio">
+                <input formControlName="anio" class="booking__form__input" id="anio" type="number" name="anio">
 
 
                 <label class="booking__form__label" for="">Color</label>
-                <input class="booking__form__input" id="color" type="text" name="color">
+                <input formControlName="color" class="booking__form__input" id="color" type="text" name="color">
 
                 <a href="" class="booking__form__siguiente_button booking__form__siguiente_button--1">Siguiente</a>
 
@@ -101,7 +101,7 @@
                     </details>
 
                     <span class="booking__button booking__button--agregar"
-                        onclick="agregarExtra('Tratamiento ArmorAll', 0)">Agregar</span>
+                        onclick="getExra('Tratamiento ArmorAll')">Agregar</span>
                     <span class="booking__button booking__button--quitar"
                         onclick="quitarExtra('Tratamiento ArmorAll', 0)">Quitar</span>
                     <span class="extra__etiqueta_agregado">Agregado</span>
@@ -121,7 +121,7 @@
                     </details>
 
                     <span class="booking__button booking__button--agregar"
-                        onclick="agregarExtra('Cera para Pasta', 1)">Agregar</span>
+                        onclick="getExtra('Cera para Pasta', 1)">Agregar</span>
                     <span class="booking__button booking__button--quitar"
                         onclick="quitarExtra('Cera para Pasta', 1)">Quitar</span>
                     <span class="extra__etiqueta_agregado">Agregado</span>
@@ -142,7 +142,7 @@
                     </details>
 
                     <span class="booking__button booking__button--agregar"
-                        onclick="agregarExtra('Compartimiento del motor', 2)">Agregar</span>
+                        onclick="getExtra('Compartimiento del motor')">Agregar</span>
                     <span class="booking__button booking__button--quitar"
                         onclick="quitarExtra('Compartimiento del motor', 2)">Quitar</span>
                     <span class="extra__etiqueta_agregado">Agregado</span>
@@ -162,7 +162,7 @@
                     </details>
 
                     <span class="booking__button booking__button--agregar"
-                        onclick="agregarExtra('Restauración de faros', 3)">Agregar</span>
+                        onclick="getExtra('Restauración de faros')">Agregar</span>
                     <span class="booking__button booking__button--quitar"
                         onclick="quitarExtra('Restauración de faros', 3)">Quitar</span>
                     <span class="extra__etiqueta_agregado">Agregado</span>
@@ -182,7 +182,7 @@
                     </details>
 
                     <span class="booking__button booking__button--agregar"
-                        onclick="agregarExtra('Lavado con champú', 4)">Agregar</span>
+                        onclick="getExtra('Lavado con champú')">Agregar</span>
                     <span class="booking__button booking__button--quitar"
                         onclick="quitarExtra('Lavado con champú', 4)">Quitar</span>
                     <span class="extra__etiqueta_agregado">Agregado</span>
@@ -202,7 +202,7 @@
                     </details>
 
                     <span class="booking__button booking__button--agregar"
-                        onclick="agregarExtra('Restauración de plásticos exteriores', 5)">Agregar</span>
+                        onclick="getExtra('Restauración de plásticos exteriores')">Agregar</span>
                     <span class="booking__button booking__button--quitar"
                         onclick="quitarExtra('Restauración de plásticos exteriores', 5)">Quitar</span>
                     <span class="extra__etiqueta_agregado">Agregado</span>
@@ -247,59 +247,19 @@
 </div> -->
 
             <section class="booking-form">
-                <h2 class="booking-form__title">Reserva tu Cita</h2>
+                <h2 class="booking-form__title">Reserva tu yuya</h2>
 
-                <form (ngSubmit)="onSubmit()" [formGroup]="bookingForm" class="booking-form__container">
+                <div class="booking-form__container">
 
-                    <!-- Selección de Fecha -->
-                    <div class="booking-form__field">
-                        <label for="fecha" class="booking-form__label">Fecha</label>
-                        <input type="date" id="fecha" formControlName="fecha" min="2024-01-01" max="2024-12-31"
-                            class="booking-form__input">
-                    </div>
-
-                    <!-- Selección de Hora -->
-                    <div class="booking-form__field">
-                        <label for="hora" class="booking-form__label">Hora</label>
-                        <input type="time" id="hora" formControlName="hora" min="07:00" max="19:00"
-                            class="booking-form__input">
-                    </div>
-
-                    <!-- Selección de Turno -->
-                    <div class="booking-form__field">
-                        <label class="booking-form__label">Turno</label>
-                        <div class="booking-form__turnos">
-                            <label>
-                                <input type="radio" formControlName="turno" value="manana">
-                                Mañana
-                            </label>
-                            <label>
-                                <input type="radio" formControlName="turno" value="tarde">
-                                Tarde
-                            </label>
-                            <label>
-                                <input type="radio" formControlName="turno" value="noche">
-                                Noche
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Botón de Enviar -->
-
-                    <button href=""
-                        class="booking__form__siguiente_button booking__form__siguiente_button--3">Enviar</button>
-
-                </form>
+                  <label for="fecha">Selecciona una yuya:</label>
+                  <input formControlName="fecha_servicio" type="date" id="fecha" name="fecha">
+                </div>
             </section>
 
 
             <input type="text" class="date__seleccionada" id="fechaYHora">
             <span class="error_fechaYHora"></span>
             <a href="" class="booking__form__siguiente_button booking__form__siguiente_button--3">Siguiente</a>
-            <button type="submit" class="booking__form__siguiente_button booking__form__siguiente_button--3">Enviar</button>
-
-
-
         </section>
 
 
@@ -308,56 +268,56 @@
 
         <section class="booking__section booking__section--detalles">
 
-            <div action="" method="" class="booking__form">
+            <div class="booking__form">
 
                 <h3 class="booking__form__titulo">Detalles</h3>
 
                 <div class="contenedor__formulario__inputs">
                     <div class="booking__form__input--50">
                         <label class="booking__form__label" for="">Nombre</label>
-                        <input type="text" class="booking__form__input booking__detalles__input" name="nombre"
+                        <input formControlName="nombre_cliente" type="text" class="booking__form__input booking__detalles__input" name="nombre"
                             id="nombre">
                     </div>
 
                     <div class="booking__form__input--50">
                         <label class="booking__form__label" for="">Apellido</label>
-                        <input type="text" class="booking__form__input booking__detalles__input" name="apellido"
+                        <input formControlName="apellido_cliente" type="text" class="booking__form__input booking__detalles__input" name="apellido"
                             id="apellido">
                     </div>
 
                 </div>
 
                 <label class="booking__form__label" for="">Correo Electrónico</label>
-                <input class="booking__form__input booking__detalles__input" type="text" name="correo" id="correo">
+                <input formControlName="email_cliente" class="booking__form__input booking__detalles__input" type="text" name="correo" id="correo">
 
                 <label class="booking__form__label" for="">Número de Teléfono</label>
-                <input class="booking__form__input booking__detalles__input" type="text" name="telefono" id="telefono">
+                <input formControlName="telefono_cliente" class="booking__form__input booking__detalles__input" type="text" name="telefono" id="telefono">
 
                 <label class="booking__form__label" for="">Dónde desea el Servicio</label>
-                <input class="booking__form__input booking__detalles__input" type="text" name="ubicacion_servicio"
+                <input formControlName="direccion_cliente" class="booking__form__input booking__detalles__input" type="text" name="ubicacion_servicio"
                     id="ubicacion_servicio">
 
                 <div class="contenedor__formulario__inputs">
                     <div class="booking__form__input--33">
                         <label class="booking__form__label" for="">Ciudad</label>
-                        <input class="booking__form__input booking__detalles__input" type="text" name="ciudad"
+                        <input formControlName="ciudad_cliente" class="booking__form__input booking__detalles__input" type="text" name="ciudad"
                             id="ciudad">
                     </div>
 
                     <div class="booking__form__input--33">
                         <label class="booking__form__label" for="">Estado</label>
-                        <input class="booking__form__input booking__detalles__input" type="text" name="estado"
+                        <input formControlName="estado_servicio" class="booking__form__input booking__detalles__input" type="text" name="estado"
                             id="estado">
                     </div>
 
                     <div class="booking__form__input--33">
                         <label class="booking__form__label" for="">Código Postal</label>
-                        <input class="booking__form__input booking__detalles__input" type="text" name="codigo_postal"
+                        <input formControlName="codigo_postal_cliente" class="booking__form__input booking__detalles__input" type="text" name="codigo_postal"
                             id="codigo_postal">
                     </div>
                 </div>
 
-                <select name="nivel_suciedad" id="nivel_suciedad" class="booking__detalles__input"
+                <select formControlName="peticion_cliente" name="nivel_suciedad" id="nivel_suciedad" class="booking__detalles__input"
                     itemid="nivel_suciedad" onblur="validarBlurInput('nivel_suciedad')">
                     <option value="">Que tan sucio está tu carro</option>
                     <option value="Mantenimiento">Mantenimiento</option>
@@ -368,7 +328,7 @@
                 </select>
 
                 <label class="booking__form__label" for="">Alguna petición específica</label>
-                <textarea name="peticion" id="" class="booking__form__textarea"></textarea>
+                <textarea formControlName="descripcion_servicio" name="peticion" id="" class="booking__form__textarea"></textarea>
 
                 <div class="booking__contenedor__checkbox">
                     <input type="checkbox" id="politica_dirty" class="booking__input__checkbox">
@@ -560,83 +520,55 @@
 
             <div class="resumen__contenedor">
 
-                <span class="id_pedido"></span>
+                <!--<span class="id_pedido"></span> -->
 
                 <h3 class="resumen__titulo">Detalles de la Compra</h3>
 
                 <div class="resumen__row">
                     <span class="resumen__row__item resumen__row__item--caracteristica">Cliente:</span>
-                    <span class="resumen__row__item resumen__dato" id="cliente__dato"></span>
+                    <span class="resumen__row__item resumen__dato" id="cliente__dato">{{nombre}}</span>
                 </div>
 
                 <div class="resumen__row">
                     <span class="resumen__row__item resumen__row__item--caracteristica">Dirección</span>
-                    <span class="resumen__row__item resumen__dato" id="direccion__dato"></span>
+                    <span class="resumen__row__item resumen__dato" id="direccion__dato">{{direccion_cliente}}</span>
                 </div>
 
                 <div class="resumen__row">
                     <span class="resumen__row__item resumen__row__item--caracteristica">Fecha y Hora</span>
-                    <span class="resumen__row__item resumen__dato" id="fechaYHora__dato"></span>
+                    <span class="resumen__row__item resumen__dato" id="fechaYHora__dato">{{fecha_servicio}}</span>
                 </div>
 
                 <div class="resumen__divisor"></div>
 
                 <div class="resumen__row">
                     <span class="resumen__row__item resumen__row__item--caracteristica">Marca</span>
-                    <span class="resumen__row__item resumen__dato" id="marca__dato"></span>
+                    <span class="resumen__row__item resumen__dato" id="marca__dato">{{marca}}</span>
                 </div>
 
                 <div class="resumen__row">
                     <span class="resumen__row__item resumen__row__item--caracteristica">Modelo</span>
-                    <span class="resumen__row__item resumen__dato" id="modelo__dato"></span>
+                    <span class="resumen__row__item resumen__dato" id="modelo__dato">{{modelo}}</span>
                 </div>
 
                 <div class="resumen__row">
                     <span class="resumen__row__item resumen__row__item--caracteristica">Año</span>
-                    <span class="resumen__row__item resumen__dato" id="anio__dato"></span>
+                    <span class="resumen__row__item resumen__dato" id="anio__dato">{{anio}}</span>
                 </div>
 
                 <div class="resumen__row">
                     <span class="resumen__row__item resumen__row__item--caracteristica">Color</span>
-                    <span class="resumen__row__item resumen__dato" id="color__dato"></span>
+                    <span class="resumen__row__item resumen__dato" id="color__dato">{{color}}</span>
                 </div>
 
                 <div class="resumen__row">
                     <span class="resumen__row__item resumen__row__item--caracteristica">Extras</span>
                     <span class="resumen__row__item">
-                        <ul class="booking__lista__extras"></ul>
+                        {{servicio_extra}}
                     </span>
                 </div>
-
-                <hr class="resumen__divisor resumen__divisor--grande">
-
-                <div class="resumen__row">
-                    <span class="resumen__row__item resumen__row__item--caracteristica">Subtotal</span>
-                    <span class="resumen__row__item">529,00 US$</span>
-                </div>
-
-                <div class="resumen__row">
-                    <span class="resumen__row__item resumen__row__item--caracteristica">Cupon</span>
-                    <span class="resumen__row__item"><input type="text" class="resumen__input"></span>
-                </div>
-
-                <div class="resumen__divisor"></div>
-
-                <div class="resumen__row">
-                    <span class="resumen__row__item resumen__row__item--caracteristica">Total estimado</span>
-                    <span class="resumen__row__item">529,00 US$</span>
-                </div>
-
-
-
-
             </div>
-
             <input type="submit" value="Pagar" class="booking__button__submit">
-
-
-
-
         </section>
 
 

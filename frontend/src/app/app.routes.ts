@@ -6,6 +6,7 @@ import { AboutComponent } from './component/about/about.component';
 import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { FormularioComponent } from './component/formulario/formulario.component';
+import { PruebasComponent } from './component/pruebas/pruebas.component';
 
 export const routes: Routes = [
 
@@ -17,6 +18,7 @@ export const routes: Routes = [
     {path: 'login', component :LoginComponent},
     {path: 'signup', component :SignupComponent},
     {path: 'forms', component :FormularioComponent},
+    {path: 'prueba', component :PruebasComponent},
 
 
 

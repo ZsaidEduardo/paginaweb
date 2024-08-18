@@ -26,7 +26,9 @@ export class Booking {
   // constructor(){
   //     this.imagen = "/assets/images/productos/producto_nuevo.png"
   // }
-  constructor(){
+  constructor(
+
+  ){
     this.marca = ""
     this.modelo = "";
     this.anio = "";

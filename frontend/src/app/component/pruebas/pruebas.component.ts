@@ -1,31 +1,24 @@
-import {Component, inject} from '@angular/core';
+import { Component, OnInit , inject} from '@angular/core';
 import { CargarScriptService } from '../../services/cargar-script.service';
-import {  FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import {BookingServicesService} from "../../services/booking-services.service";
+import { Booking } from '../../models/BookingModel';
+import { BookingServicesService } from '../../services/booking-services.service';
 
 @Component({
-  selector: 'app-booking',
+  selector: 'app-pruebas',
   standalone: true,
-  imports: [ReactiveFormsModule,CommonModule],
-  templateUrl: './booking.component.html',
-  styleUrl: './booking.component.css'
+  imports: [ReactiveFormsModule,CommonModule,FormsModule],
+  templateUrl: './pruebas.component.html',
+  styleUrl: './pruebas.component.css'
 })
-export class BookingComponent {
+export class PruebasComponent implements OnInit {
 
   bookingForm!: FormGroup;
 
   bookingService = inject(BookingServicesService)
-  constructor(private _cargarScript: CargarScriptService ,private fb: FormBuilder ) {
 
-    _cargarScript.carga(["configuraciones_idiomas/idioma_booking"]);
-    _cargarScript.carga(["booking__extras__configuracion"]);
-    _cargarScript.carga(["booking__configuracion"]);
-    _cargarScript.carga(["calendario"]);
-    _cargarScript.carga(["politica_ventanasModales"]);
-    _cargarScript.carga(["id_pedido"]);
-
-  }
 
   ngOnInit(): void {
     this.bookingForm = this.fb.group({
@@ -50,6 +43,18 @@ export class BookingComponent {
       la_tos: ['', Validators.required],
       fecha_servicio: ['', Validators.required],
     });
+
+    this.activatedRoute.params.subscribe(params => {
+      if (params['id'] == "0") {
+        this.accion = "new";
+        /* this.iniciarLocales(); */
+      } else {
+        this.accion = "update";
+       /*  this.cargarbooking( params['id'] ); */
+
+      }
+    })
+
   }
 
   getExtra(extraName: string): void {
@@ -107,7 +112,7 @@ export class BookingComponent {
     return this.bookingForm.get('ciudad_cliente');
   }
 
-  public get estado_cliente() {
+  public get estado_servicio() {
     return this.bookingForm.get('estado_cliente');
   }
 
@@ -137,10 +142,84 @@ export class BookingComponent {
 
 
 
-  onSubmit(): void {
+booking = new Booking();
+accion: string = "new";
 
+
+
+
+  constructor(private _cargarScript: CargarScriptService ,private fb: FormBuilder,
+    private router:Router,private activatedRoute: ActivatedRoute, private _bookingService: BookingServicesService
+   ) {
+
+
+
+      _cargarScript.carga(["configuraciones_idiomas/idioma_booking"]);
+    //agregado
+    this.bookingForm = this.fb.group({
+      fecha: [''],
+      hora: [''],
+      turno: ['']
+    });
+    //
+
+    _cargarScript.carga(["pruebas"]);
 
 
   }
+
+
+  onSubmit(): void {
+    console.log(this.bookingForm);
+
+
+    if (this.bookingForm.valid) {
+      // Maneja el envío del formulario aquí
+
+    }
+  }
+
+
+
+ /*  loadPreviousData() { */
+    // Aquí deberías obtener los datos de los formularios anteriores
+    // Esto es solo un ejemplo estático, adapta según tu lógica
+    /* this.clienteNombre = 'John Doe';
+    this.direccion = '1234 Elm Street';
+    this.fecha = '2024-08-01';
+    this.hora = '15:00';
+    this.marca = 'Toyota';
+    this.modelo = 'Corolla';
+    this.anio = 2022;
+    this.color = 'Rojo';
+    this.extras = ['ArmorAll Treatment', 'Pasta Wax'];
+    this.subtotal = 529.00;
+    this.totalEstimado = 529.00; */
+ /*  } */
+
+  enviarFormulario() {
+    // Lógica para enviar el formulario
+    console.log('Formulario enviado');
+  }
+
+  enviar():void{
+    this.router.navigate(['home'])
+  }
+
+    /* CREAR FACTURA BOOKING */
+
+    crearBooking():void{
+      this._bookingService.postBooking(this.booking).subscribe(
+        (result) =>{
+          console.log(result)
+          this.router.navigate(['home']);
+        }, error => {
+          alert("Error: " + error);
+        });
+
+    }
+
+
+
 
 }

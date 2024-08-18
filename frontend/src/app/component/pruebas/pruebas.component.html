@@ -1,0 +1,554 @@
+<div class="color-fondo">
+<!-- HEADER BOOKING -->
+<div class="header__booking__top2">
+    <a href="index.html" class="volver_inicio_contenedor">
+        <img src="assets/img/volver.png" alt="">
+    </a>
+
+    <h2>Booking</h2>
+
+</div>
+
+<section class="booking__section booking__section--booking">
+
+    <!-- FORMULARIO 1 -->
+    <div class="booking__form1" id="formulario1">
+        <h3 class="booking__form__titulo">Selecciona tu carro</h3>
+
+        <label  class="booking__form__label" for="marca">Marca</label>
+        <input class="booking__form__input" id="marca" type="text" name="marca" formControlName="marca" >
+
+        <label class="booking__form__label" for="modelo">Modelo</label>
+        <input class="booking__form__input" id="modelo" type="text" name="modelo" formControlName="modelo">
+
+        <label class="booking__form__label" for="anio">Año</label>
+        <input class="booking__form__input" id="anio" type="number" name="anio" formControlName="anio">
+
+        <label class="booking__form__label" for="color">Color</label>
+        <input class="booking__form__input" id="color" type="text" name="color" formControlName="color">
+
+        <a href="#" class="booking__form__siguiente_button " onclick="mostrarFormulario(2, event)">Siguiente</a>
+    </div>
+    <!-- FORMULARIO 2 -->
+
+    <div class="booking__form2" id="formulario2" style="display: none;">
+        <section class="booking__section booking__section--extras">
+
+            <div class="booking__extras__contenedor">
+
+                <div class="booking__extra__item" >
+                    <img src="assets/img/booking__extra__img1.png" alt="">
+                    <span class="booking__item__titulo">ArmorAll Treatment</span>
+
+                    <details class="booking__extra__item__details">
+                        <summary>Más Información</summary>
+                        <p>The ArmorAll Treatment is a cleaning and conditioning service for the car’s interior
+                            surfaces, including plastic, vinyl, and leather. This treatment removes dust and dirt,
+                            restores and protects against UV rays, and leaves a shiny, clean finish. It can also include
+                            a fresh fragrance. This service enhances the appearance and extends the life of the car’s
+                            interior.</p>
+                    </details>
+
+                    <span class="booking__button booking__button--agregar"
+                        onclick="getExra('Tratamiento ArmorAll')">Agregar</span>
+                    <span class="booking__button booking__button--quitar"
+                        onclick="quitarExtra('Tratamiento ArmorAll', 0)">Quitar</span>
+                    <!-- <span class="extra__etiqueta_agregado">Agregado</span> -->
+                </div>
+
+                <div class="booking__extra__item">
+                    <img src="assets/img/booking__extra__img2.png" alt="">
+                    <span class="booking__item__titulo">Pasta Wax</span>
+
+                    <details class="booking__extra__item__details">
+                        <summary>Más Información</summary>
+                        <p>The Pasta Wax service involves applying paste wax to the car's body to provide long-lasting
+                            protection and a deep shine. This treatment removes minor imperfections and shields the
+                            paint from contaminants and UV rays. It is applied manually with a fabric pad, ensuring even
+                            coverage and a professional finish. Pasta Wax offers greater durability and protection
+                            compared to liquid waxes, keeping the car's paint in top condition for a longer period.</p>
+                    </details>
+
+                    <span class="booking__button booking__button--agregar"
+                        onclick="getExra('Cera para Pasta')">Agregar</span>
+                    <span class="booking__button booking__button--quitar"
+                        onclick="quitarExtra('Cera para Pasta', 1)">Quitar</span>
+                    <!-- <span class="extra__etiqueta_agregado">Agregado</span> -->
+                </div>
+
+                <div class="booking__extra__item">
+                    <img src="assets/img/booking__extra__img3.png" alt="">
+                    <span class="booking__item__titulo">Engine Bay</span>
+
+                    <details class="booking__extra__item__details">
+                        <summary>Más Información</summary>
+                        <p>The Engine Bay Treatment involves thoroughly cleaning and conditioning the engine
+                            compartment. This service removes dirt, grease, and debris, leaving the engine looking
+                            spotless and well-maintained. Specialized products are used to protect components from wear
+                            and corrosion, enhancing the engine’s appearance and longevity. The treatment ensures a
+                            clean, professional look</p>
+                    </details>
+
+                    <span class="booking__button booking__button--agregar"
+                        onclick="getExra('Compartimiento del motor')">Agregar</span>
+                    <span class="booking__button booking__button--quitar"
+                        onclick="quitarExtra('Compartimiento del motor', 2)">Quitar</span>
+                    <!-- <span class="extra__etiqueta_agregado">Agregado</span> -->
+                </div>
+
+                <div class="booking__extra__item">
+                    <img src="assets/img/booking__extra__img4.png" alt="">
+                    <span class="booking__item__titulo">Headlight Restoration</span>
+
+                    <details class="booking__extra__item__details">
+                        <summary>Más Información</summary>
+                        <p>Headlight Restoration involves cleaning and polishing the car's headlights to remove
+                            oxidation and cloudiness. This service restores clarity, improves brightness, and enhances
+                            night driving visibility. Specialized products and tools are used to achieve a clear,
+                            like-new finish, protecting the headlights from future damage. The result is improved safety
+                            and a refreshed appearance for your vehicle.</p>
+                    </details>
+
+                    <span class="booking__button booking__button--agregar"
+                        onclick="getExra('Restauración de faros')">Agregar</span>
+                    <span class="booking__button booking__button--quitar"
+                        onclick="quitarExtra('Restauración de faros', 3)">Quitar</span>
+                    <!-- <span class="extra__etiqueta_agregado">Agregado</span> -->
+                </div>
+
+                <div class="booking__extra__item">
+                    <img src="assets/img/booking__extra__img5.png" alt="">
+                    <span class="booking__item__titulo">Shampooing</span>
+
+                    <details class="booking__extra__item__details">
+                        <summary>Más Información</summary>
+                        <p>Shampooing involves deep cleaning car seats using specialized machines and cleaners. This
+                            process removes dirt, stains, and odors from the fabric, leaving the seats fresh and clean.
+                            The machines inject a cleaning solution into the fabric and then extract the dirty water,
+                            ensuring a thorough clean. This service enhances the appearance and hygiene of your car's
+                            interior.</p>
+                    </details>
+
+                    <span class="booking__button booking__button--agregar"
+                        onclick="getExra('Lavado con champú')">Agregar</span>
+                    <span class="booking__button booking__button--quitar"
+                        onclick="quitarExtra('Lavado con champú', 4)">Quitar</span>
+                    <!-- <span class="extra__etiqueta_agregado">Agregado</span> -->
+                </div>
+
+                <div class="booking__extra__item">
+                    <img src="assets/img/booking__extra__img6.png" alt="">
+                    <span class="booking__item__titulo">Restoration Exterior Plastics</span>
+
+                    <details class="booking__extra__item__details">
+                        <summary>Más Información</summary>
+                        <p>Our Exterior Plastics Restoration service rejuvenates and protects your vehicle's plastic
+                            surfaces. Over time, exposure to the elements can fade and deteriorate exterior plastics.
+                            Our process cleans deeply and applies a high-quality plastic restorer, bringing back the
+                            original color and finish. This treatment not only enhances your vehicle’s look but also
+                            provides long-lasting protection against UV damage and future fading.</p>
+                    </details>
+
+                    <span class="booking__button booking__button--agregar"
+                        onclick="getExra('Restauración de plásticos exteriores')">Agregar</span>
+                    <span class="booking__button booking__button--quitar"
+                        onclick="quitarExtra('Restauración de plásticos exteriores', 5)">Quitar</span>
+                   <!--  <span class="extra__etiqueta_agregado">Agregado</span> -->
+                </div>
+
+            </div>
+
+
+            <a href="#" class="booking__form__siguiente_button booking__form__siguiente_button--2" onclick="mostrarFormulario(3, event)">Siguiente</a>
+
+        </section>
+    </div>
+
+    <!-- FORMULARIO 3 -->
+
+
+    <div class="booking__form3" id="formulario3" style="display: none;">
+        <section class="booking-form">
+            <h3 class="booking-form__title222">Reserve your date</h3>
+
+            <form (ngSubmit)="onSubmit()" [formGroup]="bookingForm" class="booking-form__container">
+
+                <!-- Selección de Fecha -->
+                <div class="booking-form__field">
+                    <label for="fecha" class="booking-form__label2">date</label>
+                    <input class="input_hora1" type="date" id="fecha" formControlName="fecha" min="2024-01-01" max="2024-12-31"
+                    formControlName="fecha_servicio"  >
+                </div>
+
+                <!-- Selección de Hora -->
+                <div class="booking-form__field">
+                    <label for="hora" class="booking-form__label2">Time</label>
+                    <input  class="input_hora1" type="time" id="hora" formControlName="hora" min="07:00" max="19:00"
+                    formControlName="fecha"  >
+                </div>
+
+                <!-- Selección de Turno -->
+                <div class="booking-form__field">
+                    <label class="booking-form__label22">Shift</label>
+                    <div class="booking-form__turnos">
+                        <label>
+                            <input class="booking-form__label2222" type="radio" formControlName="turno" value="manana">
+                            Morning
+                        </label>
+                        <label>
+                            <input class="booking-form__label2222" type="radio" formControlName="turno" value="tarde">
+                            Afternoon
+                        </label>
+                        <label>
+                            <input class="booking-form__label2222" type="radio" formControlName="turno" value="noche">
+                            Evening
+                        </label>
+                    </div>
+                </div>
+
+            </form>
+        </section>
+
+        <a href="#" class="booking__form__siguiente_button booking__form__siguiente_button--3" onclick="mostrarFormulario(4, event)">Siguiente</a>
+    </div>
+
+
+
+    <!-- FORMULARIO 4 -->
+
+        <!-- Formulario para Información de Entrega -->
+<div class="booking__form4" id="formulario4" style="display: none;">
+    <h3 class="booking__form__titulo">Detalles</h3>
+
+    <div class="contenedor__formulario__inputs">
+        <div class="booking__form__input--50">
+            <label class="booking__form__label" for="nombre">Nombre</label>
+            <input type="text" class="booking__form__input booking__detalles__input" name="nombre" id="nombre"
+            formControlName="nombre_cliente">
+        </div>
+
+        <div class="booking__form__input--50">
+            <label class="booking__form__label" for="apellido">Apellido</label>
+            <input type="text" class="booking__form__input booking__detalles__input" name="apellido" id="apellido"
+            formControlName="apellido_cliente">
+        </div>
+    </div>
+
+    <label class="booking__form__label" for="correo">Correo Electrónico</label>
+    <input class="booking__form__input booking__detalles__input" type="text" name="correo" id="correo"
+    formControlName="email">
+
+    <label class="booking__form__label" for="telefono">Número de Teléfono</label>
+    <input class="booking__form__input booking__detalles__input" type="text" name="telefono" id="telefono"
+    formControlName="telefono_cliente">
+
+    <label class="booking__form__label" for="ubicacion_servicio">Dónde desea el Servicio</label>
+    <input class="booking__form__input booking__detalles__input" type="text" name="ubicacion_servicio" id="ubicacion_servicio"
+    formControlName="direccion_cliente">
+
+    <div class="contenedor__formulario__inputs">
+        <div class="booking__form__input--33">
+            <label class="booking__form__label" for="ciudad">Ciudad</label>
+            <input class="booking__form__input booking__detalles__input" type="text" name="ciudad" id="ciudad"
+            formControlName="ciudad_cliente">
+        </div>
+
+        <div class="booking__form__input--33">
+            <label class="booking__form__label" for="estado">Estado</label>
+            <input class="booking__form__input booking__detalles__input" type="text" name="estado" id="estado"
+            formControlName="estado_servicio">
+        </div>
+
+        <div class="booking__form__input--33">
+            <label class="booking__form__label" for="codigo_postal">Código Postal</label>
+            <input class="booking__form__input booking__detalles__input" type="text" name="codigo_postal" id="codigo_postal"
+            formControlName="codigo_postal_cliente">
+        </div>
+    </div>
+
+    <select name="nivel_suciedad" id="nivel_suciedad" class="booking__detalles__input4" onblur="validarBlurInput('nivel_suciedad')"
+    formControlName="peticion_cliente">
+        <option value="">Que tan sucio está tu carro</option>
+        <option value="Mantenimiento">Mantenimiento</option>
+        <option value="No está mal">No está mal</option>
+        <option value="Sucio">Sucio</option>
+        <option value="Muy Sucio">Muy Sucio</option>
+        <option value="Extremandament Sucio">Extremandament Sucio</option>
+    </select>
+
+    <label class="booking__form__label" for="peticion" style="font-size: 25px;">Alguna petición específica</label>
+    <textarea  style="width: 380px; height: 250px;" name="peticion" id="peticion" class="booking__form__textarea"
+    formControlName="descripcion_servicio"></textarea>
+
+     <!-- POLITICA 21 -->
+    <div></div>
+
+
+      <!-- Checkboxes para aceptar las políticas -->
+      <input type="checkbox" id="politica_dirty" class="booking__input__checkbox">
+      <label for="politica_dirty">Estoy de acuerdo con la <span class="booking__politica__link" data-modal="modal1">Dirt Charge Policy - SpraYL</span></label>
+      <!-- 2 -->
+       <div></div>
+       <input type="checkbox" id="politica_dirty" class="booking__input__checkbox">
+      <label for="politica_dirty">Acepto la<span class="booking__politica__link" data-modal="modal2"> Vehicle Valuables Policy - SpraYL</span></label>
+      <!-- 3 y 4 -->
+       <div></div>
+       <input type="checkbox" id="politica_dirty" class="booking__input__checkbox">
+      <label for="politica_dirty">Acepto la<span class="booking__politica__link" data-modal="modal3"> Tos - SpraYL</span> Y <span class="booking__politica__link" data-modal="modal4">Privacy policy - SpraYL</span></label>
+
+      <!-- Modal Structures -->
+      <div id="modal1" class="modal">
+          <div class="modal-content">
+              <span class="close" data-close="modal1">&times;</span>
+              <span class="close">&times;</span>
+                <h3 class="titulo__politica">Dirt Charge Policy - SpraYL</h3>
+
+                <p class="parrafo__politica">Política de Cargos Adicionales Basados en la Duración del Servicio:</p>
+                <p class="parrafo__politica">En SpraYL, nos esforzamos por ofrecer servicios de limpieza de vehículos
+                    impecables y de alta calidad. Para garantizar una experiencia satisfactoria para nuestros clientes,
+                    hemos implementado una política de cargos adicionales basada en la duración del servicio.</p>
+                <p class="parrafo__politica">Durante el proceso de reserva de nuestros servicios, los clientes tienen la
+                    opción de elegir su vehículo y elegir extras deseados. En esta etapa, se muestra claramente la
+                    duración estimada del servicio. Además, el tiempo total estimado para el tamaño del vehículo y los
+                    extras seleccionados.</p>
+                <p class="parrafo__politica">Es importante tener en cuenta que si, durante el servicio, se requiere
+                    tiempo adicional más allá del tiempo estimado inicial debido al nivel de suciedad del vehículo, se
+                    aplicarán cargos adicionales. Estos cargos se calcularán una ves terminado el servicio.</p>
+                <p class="parrafo__politica">Nuestro objetivo es proporcionar un servicio integral y satisfactorio para
+                    dejar su vehículo en condiciones óptimas. Sin embargo, en casos donde el nivel de suciedad exceda
+                    las expectativas normales, puede ser necesario tiempo adicional para garantizar un resultado
+                    satisfactorio.</p>
+                <p class="parrafo__politica">Agradecemos la comprensión y cooperación de nuestros valiosos clientes
+                    respecto a esta política de cargos adicionales por tiempo. Estamos comprometidos a proporcionar un
+                    servicio de calidad y a garantizar la total satisfacción del cliente.</p>
+                <p class="parrafo__politica">Si tiene alguna pregunta o inquietud sobre esta política, no dude en
+                    contactarnos. Estamos aquí para ofrecerle la mejor experiencia de limpieza de vehículos posible.</p>
+                <p class="parrafo__politica">¡Gracias por elegir <span>Spra</span>YL!</p>
+          </div>
+      </div>
+      <!-- MODAL 2 -->
+      <div id="modal2" class="modal">
+          <div class="modal-content">
+              <span class="close" data-close="modal2">&times;</span>
+              <h3 class="titulo__politica"> Vehicle Valuables Policy - SpraYL</h3>
+
+                <p class="parrafo__politica">Política de Objetos Valiosos en el Vehículo</p>
+                <p class="parrafo__politica">Agradecemos a nuestros clientes y entendemos que pueden dejar objetos
+                    personales valiosos dentro de sus vehículos. Sin embargo, no somos responsables por la pérdida o
+                    daño de ningún objeto de valor que se encuentre dentro del vehículo durante el servicio de limpieza.
+                </p>
+                <p class="parrafo__politica">Para prevenir posibles pérdidas o daños, recomendamos que los clientes
+                    retiren todos los objetos valiosos antes de dejar su vehículo para la limpieza. En caso de que el
+                    cliente decida dejar objetos valiosos dentro del vehículo, la empresa no se hará responsable y, al
+                    aceptar esta política, el cliente está exonerando a la compañía de cualquier responsabilidad.</p>
+                <p class="parrafo__politica">En caso de que un cliente reporte la pérdida o daño de un objeto valioso,
+                    se seguirá un protocolo de investigación interna y se proporcionará toda la información posible a
+                    las autoridades pertinentes, si es necesario.</p>
+                <p class="parrafo__politica">Es importante señalar que la empresa se reserva el derecho de negarse a
+                    realizar el servicio si se identifican objetos valiosos dentro del vehículo, y no asumirá ninguna
+                    responsabilidad por la posible pérdida o daño de dichos objetos.</p>
+                <p class="parrafo__politica">Prohibición de Entrega de Llaves al Sprayler</p>
+                <p class="parrafo__politica">Queda terminantemente prohibido entregar las llaves del vehículo al
+                    Sprayler. En caso de que el cliente decida entregar la llave por algún motivo, la compañía no se
+                    hará responsable de su pérdida o de que el vehículo quede cerrado con la llave dentro. Recomendamos
+                    encarecidamente que el cliente deje el vehículo abierto al menos 30 minutos antes del servicio para
+                    evitar la necesidad de entregar la llave.</p>
+                <p class="parrafo__politica">Al aceptar nuestros servicios de limpieza, el cliente acepta y está de
+                    acuerdo con los términos y condiciones de esta política.</p>
+          </div>
+      </div>
+      <!-- modal3 -->
+      <div id="modal3" class="modal">
+          <div class="modal-content">
+              <span class="close" data-close="modal3">&times;</span>
+              <h3 class="titulo__politica">Tos - SpraYL</h3>
+
+            <p class="parrafo__politica">Propósito: Estos términos y condiciones tienen como objetivo establecer las
+                condiciones generales para la prestación de servicios por parte de SpraYL LLC, en adelante
+                denominada “SpraYL,” a sus clientes, en adelante denominados “el cliente.” Al aceptar estos términos
+                y condiciones, el cliente acepta todos los términos establecidos en el presente documento.</p>
+            <p class="parrafo__politica">Servicios Ofrecidos: La empresa se dedica a ofrecer servicios de detallado
+                de vehículos móvil sin agua, en adelante denominados “los servicios.” La empresa se compromete a
+                proporcionar los servicios con la diligencia y cuidado necesarios, de acuerdo con los estándares de
+                calidad de la industria.</p>
+            <p class="parrafo__politica">Precio y Método de Pago: El precio de los servicios será el establecido en
+                el sitio web www.sprayl.com. Los precios se expresarán en moneda local y estarán basados en
+                estimados nunca precios fijos. El pago se realizará bajo las condiciones acordadas previamente entre
+                la empresa y el cliente o a través del portal de pago en el sitio web www.sprayl.com. </p>
+            <p class="parrafo__politica">Responsabilidad de la Empresa: La empresa no será responsable por daños
+                causados al vehículo o a su contenido durante el servicio, a menos que dichos daños sean causados
+                por negligencia o incumplimiento por parte de la empresa.</p>
+            <p class="parrafo__politica">Responsabilidad del Cliente: El cliente es responsable de proporcionar
+                información precisa y completa sobre el vehículo y su contenido, y de asegurar que el vehículo esté
+                en condiciones seguras y adecuadas para la prestación de los servicios. Además, el cliente es
+                responsable de garantizar que el vehículo y su contenido estén adecuadamente asegurados.</p>
+            <p class="parrafo__politica">Política de Cancelación: El cliente puede cancelar o reprogramar los
+                servicios acordados previamente con la empresa, siempre que se haga con al menos 2 horas de
+                anticipación. En caso de cancelación tardía o falta de presentación, la empresa se reserva el
+                derecho de cobrar una tarifa de cancelación del 20% del precio total de los servicios.</p>
+            <p class="parrafo__politica">Propiedad Intelectual: Los derechos de propiedad intelectual sobre los
+                servicios y cualquier material relacionado con ellos son propiedad exclusiva de la empresa. El
+                cliente acepta no usar, copiar, modificar, distribuir ni divulgar dichos derechos sin el
+                consentimiento previo por escrito de la empresa.</p>
+            <p class="parrafo__politica">Membresías</p>
+            <p class="parrafo__politica">Básica: El cliente paga una tarifa de $9.99 al mes que le ofrece los
+                beneficios de un descuento del 20% del precio regular, más la acumulación de puntos para gastar
+                dentro de la misma en servicios o servicios extras. Estos puntos no pueden ser transferidos o
+                utilizados en otros vehículos. También incluye el beneficio de solicitar el servicio de manera
+                instantánea en la app.</p>
+            <p class="parrafo__politica">Familiar: El cliente paga una tarifa de $24.99 al mes que le ofrece los
+                beneficios de un descuento del 20% del precio regular, además de poder invitar hasta 5 amigos o
+                familiares para mayor acumulación de puntos para gastar dentro de la misma en servicios o servicios
+                extras. Estos puntos pueden ser transferidos o utilizados en otros vehículos que estén dentro de la
+                cuenta familiar. También incluye el beneficio de solicitar el servicio de manera instantánea en la
+                app.</p>
+            <p class="parrafo__politica">Ley Aplicable y Jurisdicción: Estos términos y condiciones se regirán e
+                interpretarán de acuerdo con las leyes de los Estados Unidos de América. Cualquier disputa o
+                reclamación que surja de o en conexión con estos términos y condiciones estará sujeta a la
+                jurisdicción exclusiva de los tribunales competentes del Estado de Florida.</p>
+            <p class="parrafo__politica">Al aceptar estos términos y condiciones, el cliente acepta que ha leído y
+                comprendido su contenido y los acepta en su totalidad.</p>
+
+          </div>
+      </div>
+      <!-- modal 4   -->
+      <div id="modal4" class="modal">
+          <div class="modal-content">
+              <span class="close" data-close="modal4">&times;</span>
+              <h3 class="titulo__politica">Privacy policy - SpraYL</h3>
+
+                <p class="parrafo__politica">En SpraYL, tomamos muy en serio la privacidad y protección de los datos
+                    personales de nuestros clientes y usuarios. Por ello, hemos desarrollado la siguiente política de
+                    privacidad para explicar cómo recopilamos, usamos, compartimos y protegemos la información personal
+                    que obtenemos a través de nuestros servicios y sitio web.</p>
+                <p class="parrafo__politica">Información Recopilada: Recopilamos información personal de nuestros
+                    clientes y usuarios, como nombre, dirección, correo electrónico, número de teléfono y detalles de
+                    pago, solo cuando se nos proporciona de manera voluntaria al registrarse en nuestra plataforma o al
+                    utilizar nuestros servicios. Además, podemos recopilar información técnica, como la dirección IP, el
+                    tipo de dispositivo y el navegador utilizado al acceder a nuestros servicios.</p>
+                <p class="parrafo__politica">Uso de la Información: Utilizamos la información personal que recopilamos
+                    para proporcionar nuestros servicios, procesar pagos, mejorar nuestros servicios y comunicarnos con
+                    nuestros clientes y usuarios. También podemos utilizar la información para personalizar nuestros
+                    servicios y publicidad, y para cumplir con las leyes y regulaciones aplicables.</p>
+                <p class="parrafo__politica">Compartición de Información: No compartimos, vendemos ni alquilamos la
+                    información personal de nuestros clientes y usuarios a terceros, a menos que estemos obligados por
+                    ley o sea necesario para proporcionar nuestros servicios (por ejemplo, para procesar pagos o para
+                    fines de entrega de servicios). Solo compartimos información técnica de forma agregada y anónima con
+                    terceros para fines estadísticos.</p>
+                <p class="parrafo__politica">Protección de la Información: Tomamos medidas de seguridad técnicas y
+                    organizativas adecuadas para proteger la información personal de nuestros clientes y usuarios contra
+                    pérdida, uso no autorizado, acceso, divulgación, alteración o destrucción.</p>
+                <p class="parrafo__politica">Derechos de Clientes y Usuarios: Los clientes y usuarios tienen derecho a
+                    acceder, rectificar, eliminar y limitar el uso de su información personal. También pueden retirar su
+                    consentimiento en cualquier momento. Para ejercer estos derechos, pueden contactarnos a través de
+                    nuestro sitio web o por correo electrónico.</p>
+                <p class="parrafo__politica">Cambios en la Política de Privacidad: Nos reservamos el derecho de
+                    actualizar y modificar esta política de privacidad en cualquier momento. Si se realizan cambios
+                    significativos en la política, los clientes y usuarios serán notificados a través de nuestro sitio
+                    web o por correo electrónico.</p>
+                <p class="parrafo__politica">Contacto: Si tiene preguntas o inquietudes sobre nuestra política de
+                    privacidad o el uso de su información personal, no dude en contactarnos a través de nuestro sitio
+                    web o por correo electrónico.</p>
+
+          </div>
+      </div>
+
+
+      <!-- ****** -->
+     <!--  <span class="booking__politica__link" id="openModal">Dirt Charge Policy - SpraYL</span>
+
+      <div id="myModal" class="modal">
+          <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Este es el texto que se muestra en la ventana modal. Aquí puedes poner cualquier información que desees.</p>
+          </div>
+      </div> -->
+    <!--  -->
+
+
+    <a href="#" class="booking__form__siguiente_button booking__form__siguiente_button--4" onclick="mostrarFormulario(5, event)">Siguiente</a>
+</div>
+
+<!-- Formulario para Detalles -->
+<!-- FORMULARIO 5 -->
+<div class="booking__formDetalles" id="formulario5" style="display: none; background: linear-gradient(45deg, #037c44, #3dc744); ">
+    <div class="booking__section--resumen">
+        <h3 class="resumen__titulo">Reservation Summary</h3>
+        <div class="resumen__contenedor">
+            <div class="resumen__row">
+                <span class="resumen__row__item resumen__row__item--caracteristica">Client</span>
+                <span class="resumen__row__item resumen__dato" id="cliente__dato"></span>
+            </div>
+
+            <div class="resumen__row">
+                <span class="resumen__row__item resumen__row__item--caracteristica">Direction:</span>
+                <span class="resumen__row__item resumen__dato" id="direccion__dato"></span>
+            </div>
+
+            <div class="resumen__row">
+                <span class="resumen__row__item resumen__row__item--caracteristica">Date and Time:</span>
+                <span class="resumen__row__item resumen__dato" id="fechaYHora__dato"></span>
+            </div>
+
+            <div class="resumen__divisor"></div>
+
+            <div class="resumen__row">
+                <span class="resumen__row__item resumen__row__item--caracteristica">Make:</span>
+                <span class="resumen__row__item resumen__dato" id="marca__dato"></span>
+            </div>
+
+            <div class="resumen__row">
+                <span class="resumen__row__item resumen__row__item--caracteristica">Model:</span>
+                <span class="resumen__row__item resumen__dato" id="modelo__dato"></span>
+            </div>
+
+            <div class="resumen__row">
+                <span class="resumen__row__item resumen__row__item--caracteristica">Year:</span>
+                <span class="resumen__row__item resumen__dato" id="anio__dato"></span>
+            </div>
+
+            <div class="resumen__row">
+                <span class="resumen__row__item resumen__row__item--caracteristica">Color:</span>
+                <span class="resumen__row__item resumen__dato" id="color__dato"></span>
+            </div>
+
+            <div class="resumen__row">
+                <span class="resumen__row__item resumen__row__item--caracteristica">Extras:</span>
+                <span class="resumen__row__item">
+                    <ul class="booking__lista__extras" id="extras__lista"></ul>
+                </span>
+            </div>
+
+            <hr class="resumen__divisor resumen__divisor--grande">
+
+            <div class="resumen__row">
+                <!-- <span class="resumen__row__item resumen__row__item--caracteristica">Subtotal:</span> -->
+                <span class="resumen__row__item resumen__dato" id="subtotal__dato"></span>
+            </div>
+
+            <div class="resumen__row">
+              <!--   <span class="resumen__row__item resumen__row__item--caracteristica">Cupon:</span> -->
+                <span class="resumen__row__item"><input type="text" class="resumen__input" id="cupon__input"></span>
+            </div>
+
+            <div class="resumen__divisor"></div>
+
+            <div class="resumen__row">
+                <span class="resumen__row__item resumen__row__item--caracteristica">Total estimado:</span>
+                <span class="resumen__row__item resumen__dato" id="total__dato"></span>
+            </div>
+
+            <button class="booking__button__submit">Confirmar Reserva</button>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+
+
+
+
+
+</div>
